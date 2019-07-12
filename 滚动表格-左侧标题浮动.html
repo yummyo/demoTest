@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <style>
+        .testList p {
+            background: #ddd;
+            margin: 0 0 1rem;
+        }
+
+        .sticky {
+            vertical-align: top !important;
+        }
+
+        .sticky .cell {
+            position: sticky;
+            top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <el-table class="testList" :data="tableData" :span-method="objectSpanMethod" border height='300' style="width: 100%; margin-top: 20px">
+            <el-table-column prop="room_number" label="会议室编号" width="180" class-name='sticky'>
+                <template slot-scope="scope">
+                    <p>{{ scope.row.room_number }}</p>
+                </template>
+            </el-table-column>
+            <el-table-column prop="equmentName" label="设备">
+            </el-table-column>
+        </el-table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                tableData: [{
+                        id: '1',
+                        room_number: '12',
+                        room_name: '大会议室',
+                        list: [{
+                                equmentName: '投影仪',
+                                id: '1',
+                                type: '2',
+                            },
+                            {
+                                equmentName: '音箱',
+                                id: '2',
+                                type: '3',
+                            },
+                            {
+                                equmentName: '音箱2',
+                                id: '2',
+                                type: '3',
+                            },
+                            {
+                                equmentName: '音箱3',
+                                id: '2',
+                                type: '3',
+                            },
+                            {
+                                equmentName: '音箱4',
+                                id: '2',
+                                type: '3',
+                            },
+                        ]
+                    },
+                    {
+                        id: '2',
+                        room_number: '123',
+                        room_name: '大会议室2',
+                        list: [{
+                                equmentName: '投影仪',
+                                id: '1',
+                                type: '2',
+                            },
+                            {
+                                equmentName: '音箱',
+                                id: '2',
+                                type: '3',
+                            },
+                            {
+                                equmentName: '音箱2',
+                                id: '2',
+                                type: '3',
+                            },
+                            {
+                                equmentName: '音箱3',
+                                id: '2',
+                                type: '3',
+                            },
+                            {
+                                equmentName: '音箱4',
+                                id: '2',
+                                type: '3',
+                            },
+                        ]
+                    },
+                    {
+                        id: '3',
+                        room_number: '1234',
+                        room_name: '大会议室3',
+                        list: [{
+                                equmentName: '投影仪',
+                                id: '1',
+                                type: '2',
+                            },
+                            {
+                                equmentName: '音箱',
+                                id: '2',
+                                type: '3',
+                            },
+                            {
+                                equmentName: '音箱2',
+                                id: '2',
+                                type: '3',
+                            },
+                            {
+                                equmentName: '音箱3',
+                                id: '2',
+                                type: '3',
+                            },
+                            {
+                                equmentName: '音箱4',
+                                id: '2',
+                                type: '3',
+                            },
+                        ]
+                    },
+                ]
+            },
+            mounted() {
+                this.setData()
+            },
+            methods: {
+                setData() {
+                    let arr = []
+                    this.tableData.map(v => {
+                        if (v.list && v.list.length) {
+                            const list = v.list.map((val, idx) => {
+                                if (idx == 0) val['rowspan'] = v.list.length
+                                val['room_number'] = v['room_number'] + v['room_name']
+                                val['room_id'] = v['id']
+                                return val
+                            })
+                            arr = arr.concat(list)
+                        }
+                    })
+                    this.tableData = arr
+                    console.log(arr)
+                },
+                objectSpanMethod({ row, column, rowIndex, columnIndex }) {
+                    if (columnIndex === 0) {
+                        if (row['rowspan']) {
+                            return {
+                                rowspan: row['rowspan'],
+                                colspan: 1
+                            };
+                        } else {
+                            return {
+                                rowspan: 0,
+                                colspan: 0
+                            };
+                        }
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

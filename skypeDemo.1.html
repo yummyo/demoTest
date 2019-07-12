@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"
+    />
+    <title>Title</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+  </head>
+  <body id="all_date">
+    <div
+      class="skype-button skype-chat bubble"
+      data-can-collapse="true"
+      data-can-upload-file="false"
+      data-show-header="true"
+      data-can-close="false"
+      data-entry-animation="false"
+      data-contact-id="live:smartwsg"
+    ></div>
+    <a href="skype:live:smartwsg?call">smartwsg</a>
+    <button id="call">call</button>
+    <button id="call2">call2</button>
+    <button id="refresh">刷新</button>
+    <script src="https://swx.cdn.skype.com/shared/v/1.2.35/SkypeBootstrap.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      var config = {
+        apiKey: 'a42fcebd-5b43-4b89-a065-74450fb91255', // SDK
+        apiKeyCC: '9c967f6b-a846-4df2-b43d-5167e47d81e1' // SDK+UI
+      }
+      var Application
+
+      Skype.initialize(
+        { apiKey: config.apiKey },
+        function(api) {
+          window.skypeWebApp = new api.application()
+          //Make sign in table appear
+          $('.menu #sign-in').click()
+          // whenever client.state changes, display its value
+          window.skypeWebApp.signInManager.state.changed(function(state) {
+            $('#client_state').text(state)
+          })
+        },
+        function(err) {
+          console.log(err)
+          alert('Cannot load the SDK.')
+        }
+      )
+    </script>
+  </body>
+</html>

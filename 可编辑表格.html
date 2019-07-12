@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/element-ui/lib/theme-chalk/index.css"
+    />
+    <style>
+      .test {
+        color: red;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div id="app">
+      <el-table
+        :data="tableData"
+        border
+        style="width: 100%"
+        @header-click="headerClick"
+      >
+        <el-table-column
+          v-for="(item,index) of userConfig"
+          :prop="item.prop"
+          :label="item.label"
+        >
+          <template slot-scope="scope">
+            <span
+              v-show="!getVisible(scope.$index,item.prop)"
+              @click="btnClick(scope.$index,item.prop)"
+              >{{ scope['row'][item.prop] }}
+            </span>
+            <template v-if="item.type == 'input'">
+              <el-input
+                v-show="getVisible(scope.$index,item.prop)"
+                v-model="scope['row'][item.prop]"
+                placeholder="请输入内容"
+              ></el-input>
+            </template>
+            <template v-else>
+              <el-date-picker
+                v-show="getVisible(scope.$index,item.prop)"
+                v-model="scope['row'][item.prop]"
+                type="date"
+                placeholder="选择日期"
+              >
+              </el-date-picker>
+            </template>
+          </template>
+        </el-table-column>
+      </el-table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- 引入组件库 -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <script>
+      var userConfig = [
+        {
+          width: 150,
+          label: '日期',
+          prop: 'date',
+          type: 'datePicker'
+        },
+        {
+          width: 150,
+          label: '姓名',
+          prop: 'name',
+          type: 'input'
+        }
+      ]
+      var tableData = [
+        {
+          date: '2016-05-20',
+          name: '王大虎',
+          city: '普陀区'
+        },
+        {
+          date: '2016-05-20',
+          name: '王小虎',
+          city: '松江区'
+        }
+      ]
+      var app = new Vue({
+        el: '#app',
+        data: {
+          visible: '',
+          tableData,
+          userConfig
+        },
+        mounted() {},
+        methods: {
+          headerClick(column, event) {
+            console.log(column, event)
+            console.log(column.className)
+            column = column.className = 'test'
+            this.$forceUpdate()
+          },
+          getVisible(index, key) {
+            // 判断显示隐藏
+            if (this.visible) {
+              let _key = this.visible.split('_')[1]
+              let _name = this.visible.split('_')[0]
+              if (_key == key && index == _name) {
+                return true
+              }
+            }
+            return false
+          },
+          btnClick(index, key) {
+            //   设置visible
+            this.visible = index + '_' + key
+            console.log(this.visible)
+          }
+        }
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"> 
+        <title>Title</title>
+        <style type="text/css">
+        	h2{
+                color:red;
+            }
+            #capture{
+                display:flex;
+                justify-content:space-around;
+                align-items:center;
+            }
+        </style>
+    </head>
+    <body id="all_date">
+        <div id="capture" style="padding: 10px; background: #f5da55">
+            <h4 style="color: #000; ">Hello world!</h4>
+            <h2>你好这是测试</h2>
+        </div>
+        <script type="module">
+            import html2canvas from './node_modules/html2canvas';
+            html2canvas(document.getElementById("capture")).then(function(canvas) {
+                document.getElementById('app').appendChild(canvas);
+            });
+        </script>
+    </body>
+</html>

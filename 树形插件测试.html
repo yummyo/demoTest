@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <button-counter></button-counter>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.js"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                data: {
+                    name: '上海兆翌智能工程有限公司',
+                    children: [{
+                            name: '上海',
+                            children: [{
+                                    name: '陆家嘴产业园',
+                                    image_url: 'https://iconfont.alicdn.com/t/1534822793431.jpg@100h_100w.jpg',
+                                    children: [{
+                                            name: 'A楼',
+                                            children: [{
+                                                    name: '17楼'
+                                                },
+                                                {
+                                                    name: '18楼'
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            name: 'B楼',
+                                            children: [{
+                                                name: '5楼'
+                                            }]
+                                        }
+                                    ]
+                                },
+                                {
+                                    name: '前滩尚博',
+                                    image_url: 'https://iconfont.alicdn.com/t/1534822793431.jpg@100h_100w.jpg',
+                                    children: [{
+                                            name: 'HAHA楼',
+                                            children: [{
+                                                name: '17楼'
+                                            }]
+                                        },
+                                        {
+                                            name: '1号楼',
+                                            children: [{
+                                                name: '5楼'
+                                            }]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            name: '杭州',
+                            children: [{
+                                name: '阿里巴巴',
+                                image_url: 'https://iconfont.alicdn.com/t/1534822793431.jpg@100h_100w.jpg',
+                                children: [{
+                                        name: 'A楼',
+                                        children: [{
+                                            name: '17楼'
+                                        }]
+                                    },
+                                    {
+                                        name: 'B楼',
+                                        children: [{
+                                            name: '5楼'
+                                        }]
+                                    }
+                                ]
+                            }]
+                        }
+                    ]
+                }
+            },
+            components: {
+                'button-counter': {
+                    data: function() {
+                        return {
+                            count: 0
+                        }
+                    },
+                    template: '<button v-on:click="count++">You clicked me {{ count }} times.</button>'
+                }
+            },
+            mounted() {},
+            methods: {}
+        })
+    </script>
+</body>
+
+</html>

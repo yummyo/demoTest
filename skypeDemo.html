@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"
+    />
+    <title>Title</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+  </head>
+  <body id="all_date">
+    <div
+      class="skype-button skype-chat bubble"
+      data-can-collapse="true"
+      data-can-upload-file="false"
+      data-show-header="true"
+      data-can-close="false"
+      data-entry-animation="false"
+      data-contact-id="live:smartwsg"
+    ></div>
+    <a href="skype:live:smartwsg?call">smartwsg</a>
+    <button id="call">call</button>
+    <button id="call2">call2</button>
+    <button id="refresh">刷新</button>
+    <script src="https://swc.cdn.skype.com/sdk/v1/sdk.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+      window.addEventListener('lcw:ready', function handleLivechatReadyEvent() {
+        // Handle LiveChat SDK ready event
+        // SDK methods are ready for use now
+        // Initiate a chat using startChat SDK
+        console.log('ready')
+      })
+      window.addEventListener('lcw:error', function handleLivechatErrorEvent(
+        errorEvent
+      ) {
+        // Handle LiveChat error event
+        console.log(errorEvent)
+      })
+      $(function() {
+        console.log('load')
+        $('#call').click(function() {
+          console.log(SkypeWebControl.SDK)
+          console.log(SkypeWebControl.SDK.Chat)
+          // SkypeWebControl.SDK.start()
+          SkypeWebControl.SDK.Chat.startChat({
+            ConversationId: 'YOUR_BOT_ID',
+            ConversationType: 'agent'
+          })
+        })
+        $('#call2').click(function() {
+          console.log('call')
+          // SkypeWebControl.SDK.start()
+          SkypeWebControl.SDK.Chat.startChat({
+            ConversationId: 'live:smartwsg',
+            ConversationType: 'agent'
+          })
+        })
+        $('#refresh').click(function() {
+          window.location.href = window.location.href + '?a=' + Date.now()
+        })
+      })
+    </script>
+  </body>
+</html>

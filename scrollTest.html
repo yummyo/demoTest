@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <style>
+        .testList {
+            height: 100px;
+            ;
+            border: 2px solid red;
+            position: relative;
+            overflow: auto;
+        }
+
+        .testList p {
+            position: sticky;
+            top: 0;
+            background: #ddd;
+            margin: 0 0 1rem;
+        }
+
+        .imgClass {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <ul class="testList">
+            <li v-for="(item,index) of list" :key="index">
+                <p>{{ item }}</p>
+                <div>123</div>
+                <div>123</div>
+            </li>
+        </ul>
+        <img :src="imgNow" alt="" @load='imgOnload' class="imgClass">
+        <button @click='btnClick'>test</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                list: [
+                    'A', 'B', "C", 'D', 'E', 'F', "G"
+                ],
+                imgList: [
+                    './img/1.jpg',
+                    './img/2.jpg',
+                    './img/3.jpg',
+                    './img/5.jpg',
+                    './img/4.jpg'
+                ],
+                imgNow: './img/1.jpg'
+            },
+            methods: {
+                btnClick() {
+                    this.imgNow = this.imgList[Date.now() % 4]
+                },
+                imgOnload() {
+                    console.log('图片加载完成')
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

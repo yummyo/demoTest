@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <style>
+        .filter,
+        .filter-text {
+            max-width: 600px;
+            height: 50px;
+            background-image: linear-gradient(to right, blue, black);
+            animation: hue 6s linear infinite;
+            filter: hue-rotate(0deg);
+        }
+
+        .filter-text {
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .filter-blur {
+            max-width: 600px;
+            height: 50px;
+            background: linear-gradient(to right, blue, black);
+            filter: blur(12px);
+            mask: no-repeat center;
+            mask-image: linear-gradient(black, black), linear-gradient(black, black);
+            mask-size: cover, 60px 60px;
+            mask-composite: exclude;
+            mask-composite: source-out;
+            transform: scale(1.1);
+        }
+
+        .filter-bonding {
+            background-color: #000;
+            filter: blur(10px) contrast(5);
+            height: 200px;
+            position: relative;
+        }
+
+        .box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(0, -50%);
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+
+        .box-1 {
+            background-color: deepskyblue;
+            animation: fly-r 5s infinite alternate;
+        }
+
+        .box-2 {
+            width: 60px;
+            height: 60px;
+            background-color: white;
+            animation: fly-l 5s infinite alternate;
+        }
+
+        @keyframes fly-r {
+            from {
+                transform: translate(0, -50%);
+            }
+
+            to {
+                transform: translate(120px, -50%);
+            }
+        }
+
+        @keyframes fly-l {
+            from {
+                transform: translate(120px, -50%);
+            }
+
+            to {
+                transform: translate(0, -50%);
+            }
+        }
+
+        @keyframes hue {
+            from {
+                filter: hue-rotate(0deg);
+            }
+
+            to {
+                filter: hue-rotate(360deg);
+            }
+        }
+
+        .waterBox {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            overflow: hidden;
+            background: #000;
+            filter: blur(3px) contrast(10);
+        }
+
+        div.water {
+            position: relative;
+            display: inline-block;
+            width: auto;
+            color: #fff;
+            font-size: 124px;
+            text-align: center;
+            margin: 100px auto;
+            border-bottom: 10px solid #fff;
+            transform: skewY(5deg);
+        }
+
+        div.water::before {
+            position: absolute;
+            content: "";
+            bottom: -20px;
+            width: 10px;
+            height: 20px;
+            border-radius: 50%;
+            background: #fff;
+            transform: translate(0, 0);
+            animation: move 7.5s ease-in-out infinite;
+        }
+
+        div.water::after {
+            position: absolute;
+            content: "";
+            left: 0;
+            bottom: -20px;
+            width: 10px;
+            height: 20px;
+            border-radius: 50%;
+            background: #fff;
+            transform: translate(0, 0);
+            animation: move 7.5s ease-in-out 1s infinite;
+        }
+
+        @keyframes move {
+            80% {
+                bottom: -30px;
+                transform: translate(623px, 0);
+            }
+
+            93% {
+                transform: translate(623px, 3px);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translate(623px, 150px);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body id="all_date">
+    <div class="filter">这是一段测试文字</div>
+    <div class="filter-text">filter-text</div>
+    <div class="filter-blur">filter-blur</div>
+    <div class="filter-bonding">
+        <div class="box box-1"></div>
+        <div class="box box-2"></div>
+    </div>
+    <div class="waterBox">
+        <div class="water">这是一段测试文字</div>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>

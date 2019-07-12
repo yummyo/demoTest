@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"> 
+        <title>Title</title>
+        <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+        <style type="text/css">
+        	.h100{
+        		height: 1000px;
+        	}
+        </style>
+    </head>
+    <body id="all_date">
+    	<div class="h100"></div>
+    	<a href="javascript:void(0)" onclick="test()">dft</a>
+        <ul id="test"></ul>
+        <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script>
+        	function test(){
+        		console.log('123')
+        	}
+        	$.ajax({
+        		url:'https://i.donzch.com/queryHomeCarouselFigureList',
+        		type:"POST",
+    			beforeSend: function(request) {
+                    request.setRequestHeader("Test", "Chenxizhang");
+                },
+        		success:(res)=>{
+        			console.log(res)
+        		}
+        	})
+            let data = [
+                {
+                    "id":"1",
+                    "pid":"",
+                    "key":"",
+                    "text":"回用池",
+                    "point":
+                    [
+                        {
+                            "id":"11",
+                            "pid":"1",
+                            "key":"",
+                            "text":"1#液位(m)"
+                        },
+                        {
+                            "id":"12",
+                            "pid":"1",
+                            "key":"",
+                            "text":"2#液位(m)"
+                        },
+                    ],
+                },
+                
+                {
+                    "id":"2",
+                    "pid":"",
+                    "key":"",
+                    "text":"提升泵房",
+                    "point":
+                    [
+                        {
+                            "id":"21",
+                            "pid":"2",
+                            "key":"",
+                            "text":"1#进水液位(m)"
+                        },
+                        {
+                            "id":"22",
+                            "pid":"2",
+                            "key":"",
+                            "text":"2#进水液位(m)"
+                        },
+                        {
+                            "id":"23",
+                            "pid":"2",
+                            "key":"",
+                            "text":"1#提升流量(m³)"
+                        },
+                        {
+                            "id":"25",
+                            "pid":"2",
+                            "key":"",
+                            "text":"2#提升流量(m³)"
+                        },
+                    ],
+                },
+            ];
+            let _html = '',
+                childData = {},
+                parentData = {},
+                // 选中列表
+                checkedList = {},
+                // 未选中列表
+                unCheckedList = {};
+            $.each(data,(i,v) => {
+                _html += `<li>${v.text}`
+                // 添加到父元素数组
+                parentData[v.id] = v
+                if(v.point){
+                    _html += `<ul>`
+                    $.each(v.point,(ii,vv) => {
+                        // 拼接页面
+                        _html += `<li>
+                            <input type='checkbox' inputId='${vv.id}'/>${v.text}
+                        </li>`
+                        // 添加到子元素数组
+                        childData[vv.id] = vv
+                    })
+                    _html += `</ul>`
+                }
+                _html += `</li>`
+            })
+            $("#test").html(_html)
+            // 复制数组
+            unCheckedList = JSON.parse(JSON.stringify(childData));
+            $('input[type = checkbox]').change(function(){
+                let boxId = $(this).attr('inputId'),
+                    boxData = childData[boxId];
+                if($(this).is(":checked")){
+                    // 如果是选中 从添加一条到选中列表 再从未选中中删除一条
+                    checkedList[boxId] = boxData
+                    delete unCheckedList[boxId]
+                }else{
+                    unCheckedList[boxId] = boxData
+                    delete checkedList[boxId]
+                }
+                if(Object.keys(unCheckedList).length > 0) {
+                     console.log('未被选中列表')
+                     console.log(setData(unCheckedList))
+                }
+                if(Object.keys(checkedList).length > 0){
+                    console.log('未被选中列表')
+                    console.log(setData(checkedList))
+                } 
+            })
+            function setData(data){
+                let Obj = {},
+                    _jsonData = []
+                $.each(data,(i,v) => {
+                    if(!Obj[v.pid]) Obj[v.pid] = []
+                    Obj[v.pid].push(v)
+                })
+                $.each(Obj,(i,v) => {
+                    if(parentData[i]){
+                        let arr = {}
+                        arr = JSON.parse(JSON.stringify(parentData[i]))
+                        arr['point'] = v
+                        _jsonData.push(arr)
+                    }
+                })
+                return _jsonData
+            }
+        </script>
+    </body>
+</html>

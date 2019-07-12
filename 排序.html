@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>排序</title>
+</head>
+
+<body>
+    <script>
+        var arr = [1, 55, 3, 2, 8];
+        var i;
+        for (i = 1; i < arr.length - 2; i++) {
+            for (var j = 1; j < arr.length - 1; j++) {
+                if (arr[j] - arr[j + 1] > 0) {
+                    console.log(arr[i], arr[j]);
+                    [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]]
+                }
+            }
+        }
+        console.log(arr)
+    </script>
+</body>
+
+</html>

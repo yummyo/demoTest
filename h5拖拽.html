@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <style>
+      .parent {
+        display: flex;
+      }
+      div {
+        flex: 1;
+      }
+      .box,
+      .target {
+        width: 500px;
+        height: 500px;
+        border: 2px solid #ddd;
+        display: inline-block;
+        position: relative;
+      }
+      .box img {
+        height: 100px;
+        width: 100px;
+      }
+      .target img {
+        position: absolute;
+        height: 100px;
+        width: 100px;
+      }
+      img:focus {
+        border: 1px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="box">
+        <img
+          id="img1"
+          src="./img/1.jpg"
+          alt=""
+          draggable="true"
+          ondragstart="drag(event)"
+          ondragend="end(event)"
+        />
+        <img
+          id="img2"
+          src="./img/2.jpg"
+          alt=""
+          draggable="true"
+          ondragstart="drag(event)"
+          ondragend="end(event)"
+        />
+        <img
+          id="img3"
+          src="./img/3.jpg"
+          alt=""
+          draggable="true"
+          ondragstart="drag(event)"
+          ondragend="end(event)"
+        />
+        <img
+          id="img4"
+          src="./img/4.jpg"
+          alt=""
+          draggable="true"
+          ondragstart="drag(event)"
+          ondragend="end(event)"
+        />
+      </div>
+      <div
+        class="target"
+        draggable="true"
+        ondrop="drop(event)"
+        ondragover="allowDrop(event)"
+      ></div>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+      $('img').click(function() {
+        $(this).addClass('active')
+      })
+      function drag(e) {
+        // e.preventDefault();
+        console.log('拖拽开始')
+        console.log(e)
+        e.dataTransfer.setData(
+          'Text',
+          e.offsetX + '_' + e.offsetY + '_' + e.target.id
+        )
+      }
+      function allowDrop(ev) {
+        //重写dragover事件的默认行为，将无效放置目标设置为可放置目标
+        ev.preventDefault()
+        console.log('正在目标中移动')
+      }
+      function drop(ev) {
+        ev.preventDefault()
+        //保存在dataTransfer对象中的数据只能在drop事件处理程序中读取
+        //元素拖到放置目标中会触发drop事件。
+        var data = ev.dataTransfer.getData('Text').split('_')
+        console.log(data)
+        let _Node = document.getElementById(data[2]).cloneNode(true)
+        _Node.id = 'img_' + new Date().getTime()
+        _Node.style.left = ev.offsetX - data[0] + 'px'
+        _Node.style.top = ev.offsetY - data[1] + 'px'
+        ev.target.appendChild(_Node)
+        console.log('拖放成功了')
+        console.log(ev)
+      }
+      function enter() {
+        console.log('进入目标区了')
+      }
+      function leave() {
+        console.log('离开目标区了')
+      }
+      function end() {
+        console.log('拖放停止了')
+      }
+    </script>
+  </body>
+</html>
