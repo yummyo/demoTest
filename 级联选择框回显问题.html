@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+</head>
+
+<body>
+    <div id="app">
+        <el-cascader style="width:100%;" v-model="floor" :options="areaList" @change='change' :props="{value:'id',label:'name',children:'list'}" :show-all-levels="true"></el-cascader>
+        <el-button @click='setData'>填充</el-button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                form: {
+                    room_name: '',
+                    room_number: '',
+                    floor_id: '4',
+                    people_num: '',
+                    room_manager: '',
+                    room_type: ''
+                },
+                floor: [],
+                areaList: [
+                    { "id": 2, "name": "北京市", "x": "116.407526", "y": "39.90403", "list": [{ "id": 1, "block_id": 1, "name": "北京SK大厦", "parent_id": 2, "type": "block", "detail_address": "北京市朝阳区建国门外大街甲6号", "block_pic": "storage/system/91318d17e5eba257b99d6f437a525ccd20190612152114.jpg", "x": null, "y": null, "list": [{ "id": 1, "building_id": 1, "name": "A座", "parent_id": 1, "type": "building", "x": null, "y": null, "list": [{ "id": 1, "floor_id": 1, "name": "13层", "parent_id": 1, "type": "floor", "floor_pic": null }, { "id": 4, "floor_id": 4, "name": "14层", "parent_id": 1, "type": "floor", "floor_pic": null }, { "id": 5, "floor_id": 5, "name": "15层", "parent_id": 1, "type": "floor", "floor_pic": null }] }, { "id": 2, "building_id": 2, "name": "B座", "parent_id": 1, "type": "building", "x": null, "y": null, "list": [{ "id": 6, "floor_id": 6, "name": "2层", "parent_id": 2, "type": "floor", "floor_pic": null }, { "id": 7, "floor_id": 7, "name": "3层", "parent_id": 2, "type": "floor", "floor_pic": null }, { "id": 8, "floor_id": 8, "name": "6层", "parent_id": 2, "type": "floor", "floor_pic": null }, { "id": 19, "floor_id": 19, "name": "7层", "parent_id": 2, "type": "floor", "floor_pic": null }] }, { "id": 3, "building_id": 3, "name": "C座", "parent_id": 1, "type": "building", "x": null, "y": null, "list": [{ "id": 9, "floor_id": 9, "name": "8层", "parent_id": 3, "type": "floor", "floor_pic": null }, { "id": 10, "floor_id": 10, "name": "9层", "parent_id": 3, "type": "floor", "floor_pic": null }] }] }, { "id": 9, "block_id": 9, "name": "北京BTP", "parent_id": 2, "type": "block", "detail_address": "北京市大兴区同济南路1号", "block_pic": "storage/system/2d741f28057c651923560d830899f97b20190701102432.png", "x": null, "y": null, "list": [{ "id": 10, "building_id": 10, "name": "1号楼", "parent_id": 9, "type": "building", "x": null, "y": null, "list": [{ "id": 17, "floor_id": 17, "name": "2层", "parent_id": 10, "type": "floor", "floor_pic": null }, { "id": 18, "floor_id": 18, "name": "5层", "parent_id": 10, "type": "floor", "floor_pic": null }] }] }], "city_id": 2 }, { "id": 20, "name": "天津市", "x": "117.200983", "y": "39.084158", "list": [{ "id": 7, "block_id": 7, "name": "天津117大厦", "parent_id": 20, "type": "block", "detail_address": "天津市西青区高新技术产业园区", "block_pic": "storage/system/12c886f7dba9656fd7de894ab4e998b720190711180005.jpg", "x": "117.124008", "y": "39.098007", "list": [{ "id": 8, "building_id": 8, "name": "A区", "parent_id": 7, "type": "building", "x": null, "y": null, "list": [{ "id": 15, "floor_id": 15, "name": "15层", "parent_id": 8, "type": "floor", "floor_pic": null }] }] }], "city_id": 20 }, { "id": 241, "name": "太原市", "x": "112.548879", "y": "37.87059", "list": [], "city_id": 241 }, { "id": 857, "name": "南京市", "x": "118.796877", "y": "32.060255", "list": [], "city_id": 857 }, { "id": 907, "name": "南通市", "x": null, "y": null, "list": [{ "id": 10, "block_id": 10, "name": "五一大厦", "parent_id": 907, "type": "block", "detail_address": "通州区五一路", "block_pic": "storage/system/0bd5e1bb079760c3ddada34734e30f2b20190712112821.jpg", "x": null, "y": null, "list": [{ "id": 11, "building_id": 11, "name": "603栋", "parent_id": 10, "type": "building", "x": null, "y": null, "list": [{ "id": 20, "floor_id": 20, "name": "24层", "parent_id": 11, "type": "floor", "floor_pic": "storage/system/b6e073c3babb37b82897e7a30502f4d820190712114332.jpg" }] }] }], "city_id": 907 }, { "id": 917, "name": "连云港市", "x": "119.221611", "y": "34.596653", "list": [], "city_id": 917 }, { "id": 1602, "name": "金水区", "x": null, "y": null, "list": [{ "id": 8, "block_id": 8, "name": "中原区", "parent_id": 1602, "type": "block", "detail_address": "建设路279号", "block_pic": "storage/system/019e0e9f29d0f3bb6eddd7e0fcf44ad220190630154204.jpg", "x": null, "y": null, "list": [{ "id": 9, "building_id": 9, "name": "2号楼", "parent_id": 8, "type": "building", "x": null, "y": null, "list": [{ "id": 16, "floor_id": 16, "name": "3层", "parent_id": 9, "type": "floor", "floor_pic": null }] }] }], "city_id": 1602 }, { "id": 1624, "name": "洛阳市", "x": "112.45404", "y": "34.619682", "list": [], "city_id": 1624 }, { "id": 1641, "name": "平顶山市", "x": "113.192661", "y": "33.766169", "list": [], "city_id": 1641 }
+                ]
+            },
+            mounted() {
+                // 非唯一id处理 比如这条区域信息 id并不是唯一 所以通过递归处理了下数据 将id和type绑定 手工创造了一个唯一id 
+                this.regroupData(this.areaList)
+            },
+            methods: {
+                change(item) {
+                    console.log(item)
+                },
+                regroupCascaderData(
+                    id,
+                    data,
+                    key = 'label',
+                    val = 'value',
+                    list = 'children'
+                ) {
+                    let _allObj = {}
+                    const _allArr = []
+                    const setData = function(data) {
+                        let Obj
+                        for (const item of data) {
+                            Obj = {
+                                [key]: item[key],
+                                [val]: item[val]
+                            }
+                            if (item[val] == id) {
+                                Obj['isOk'] = true
+                                return Obj
+                            } else if (item[list] && item[list].length) {
+                                Obj[list] = setData(item[list])
+                                if (Obj[list] && Obj[list]['isOk']) {
+                                    Obj['isOk'] = true
+                                    return Obj
+                                }
+                            } else {
+                                Obj = null
+                            }
+                        }
+                        return Obj
+                    }
+                    const getObjData = function(data) {
+                        _allArr.push(data[val])
+                        if (data[list]) {
+                            getObjData(data[list])
+                        }
+                    }
+                    _allObj = setData(data)
+                    getObjData(_allObj)
+                    return {
+                        Obj: _allObj,
+                        arr: _allArr
+                    }
+                },
+                regroupData() {
+                    const extendKey = function(jsonData) {
+                        if (Array.isArray(jsonData)) {
+                            jsonData = jsonData.map(c => {
+                                const _type = c['type'] || 'city'
+                                c.eid = _type + '_' + c['id']
+                                if (c.list && c.list.length) {
+                                    c.list = extendKey(c.list)
+                                }
+                                return c
+                            })
+                        }
+                        return jsonData
+                    }
+                    this.areaList = extendKey(this.areaList)
+                },
+                setData() {
+                    const arr = this.regroupCascaderData(
+                        'floor_' + this.form.floor_id,
+                        this.areaList,
+                        'name',
+                        'eid',
+                        'list'
+                    )
+                    this.floor = arr['arr'].map(v => v.split('_')[1] * 1)
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
