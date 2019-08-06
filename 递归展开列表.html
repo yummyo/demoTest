@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+</head>
+
+<body>
+    <div id="app">
+        <el-table class="testList" :data="tableData" :span-method="objectSpanMethod" border height='300' style="width: 100%; margin-top: 20px">
+            <el-table-column prop="room_number" label="会议室编号" width="180" class-name='sticky'>
+                <template slot-scope="scope">
+                    <p>{{ scope.row.room_number }}</p>
+                </template>
+            </el-table-column>
+            <el-table-column prop="equmentName" label="设备">
+            </el-table-column>
+        </el-table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                treeData: [{
+                        id: 1,
+                        name: 'test1',
+                        list: [
+                            id: 2,
+                            name: 'test2',
+                            list: [
+                                id: 3,
+                                name: 'test3',
+                            ]
+                        ]
+                    },
+                    {
+                        id: 4,
+                        name: 'test4',
+                        list: [
+                            id: 5,
+                            name: 'test5',
+                            list: [
+                                id: 6,
+                                name: 'test6',
+                            ]
+                        ]
+                    }
+                ]
+            },
+            components: {
+                tree: {
+
+                }
+            },
+            mounted() {},
+            methods: {}
+        })
+    </script>
+</body>
+
+</html>
