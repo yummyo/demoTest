@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <canvas id="main"></canvas>
+    </div>
+    <script src="./node_modules/zrender/dist/zrender.js"></script>
+    <script>
+        var zr = zrender.init(document.getElementById('main'), {
+            width: 1000,
+            height: 500,
+            devicePixelRatio: 1
+        });
+        var line = new zrender.Line({
+            style: {
+                stroke: 'red', //线的颜色
+                lineWidth: 10, //线宽
+            },
+            shape: {
+                x1: 10, //起始点横坐标
+                y1: 10, //起始点纵坐标
+                x2: 100, //结束点横坐标
+                y2: 100, //结束点横坐标
+            },
+            draggable: true
+        });
+        line.on('click', function(e) {
+            console.log('点击了矩形')
+        });
+        zr.add(line)
+    </script>
+</body>
+
+</html>
