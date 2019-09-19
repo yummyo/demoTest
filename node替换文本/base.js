@@ -1,6 +1,6 @@
 var pageData = [
   {
-    path: 'http://www.smartwork.link',
+    path: 'http://www.smartwork.link/index.html',
     T: '思沃普智慧办公 丨 安全办公、智慧办公、绿色办公',
     D:
       '以安全办公、共享办公、绿色办公为基础的多元一体化，将智慧、数据、运营三者有机结合，构建以用户为本的未来办公体验，打造全方位闭环智能办公系统平台。',

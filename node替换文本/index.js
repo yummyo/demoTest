@@ -7,8 +7,7 @@ let basePath = './html/',
     encoding: 'utf-8'
   }
 for (let item of pageData) {
-  let fileName = item['path'].split('/')
-  fileName = fileName[fileName.length - 1].split('>')[0]
+  let fileName = item['path'].replace(/.+\/([^\/]+\.html)/, '$1')
   fs.readFile(basePath + fileName, option, (err, data) => {
     if (err) {
       console.log('读文件操作失败')

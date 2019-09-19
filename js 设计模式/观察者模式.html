@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>观察者模式</title>
+</head>
+
+<body>
+    <button id='off'>解绑</button>
+    <script src='https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js'></script>
+    <script>
+        class observer {
+            constructor() {
+                this.events = {}
+            }
+            on(eventsType, handle) {
+                // 订阅事件
+                if (!this.events[eventsType]) this.events[eventsType] = []
+                this.events[eventsType].push(handle)
+            }
+            emit(eventsType, ...args) {
+                // 触发事件
+                if (this.events[eventsType]) {
+                    this.events[eventsType].forEach((item, key, arr) => {
+                        item.apply(null, args)
+                    })
+                }
+            }
+            off(eventsType, handle) {
+                // 解除事件
+                if (this.events[eventsType]) {
+                    this.events[eventsType].forEach((item, key, arr) => {
+                        if (item == handle) {
+                            this.events[eventsType].splice(key, 1)
+                            console.log(eventsType, '解绑成功')
+                        }
+                    })
+                }
+            }
+        }
+        let testFun = function(data) {
+            console.log("demo加载好了啊", data)
+        }
+        // 初始化
+        let demo = new observer()
+        // 注册事件
+        demo.on('ready', testFun)
+        setTimeout(() => {
+            // 通知
+            demo.emit("ready", new Date())
+        }, 5000, );
+        $("#off").click(function() {
+            // 接触绑定
+            demo.off("ready", testFun)
+        })
+    </script>
+</body>
+
+</html>
