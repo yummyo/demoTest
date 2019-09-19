@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <span id="test">
+        <span>测试机</span>
+        <p>测试机</p>
+        1231231111
+        <span>
+            1 2
+        </span>
+        <div>2</div>
+    </span>
+    <script src='https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js'></script>
+    <script>
+        function getElement(dom) {
+            $.each(dom, function(i, v) {
+                if ($(v).children().length) {
+                    // 如果当前节点下边还有子节点
+                    getElement($(v).contents())
+                } else if ($(v).contents().length) {
+                    // 如果当前节点下边是文本节点 类似 <div>123</div>
+                    if ($(v).prop("tagName") == 'SPAN') {
+                        return
+                    } else {
+                        $(v).html($(`<span>${$(v).text()}</span>`))
+                    }
+                } else if (v.nodeType == 3 && !/^\s+$/.test(v.nodeValue)) {
+                    // 如果是节点列表中的文本节点
+                    $(v).after($(`<span>${ v.nodeValue}</span>`)).remove()
+                }
+            })
+        }
+        getElement($("#test"))
+    </script>
+</body>
+
+</html>

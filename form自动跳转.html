@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id='alipay_submit' target='_blank' name='alipay_submit' action='https://openapi.alipaydev.com/gateway.do?charset=utf-8' method='POST'><input type='hidden' name='app_id' value='2016092800612229' /><input type='hidden' name='format' value='JSON' /><input type='hidden' name='charset' value='utf-8' /><input type='hidden' name='sign_type' value='RSA2' /><input type='hidden' name='version' value='1.0' /><input type='hidden' name='return_url' value='http://pay.smartwork.link/pay_success' /><input type='hidden' name='notify_url' value='http://pay.smartwork.link/api/notify' /><input type='hidden' name='timestamp' value='2019-09-18 16:50:31' /><input type='hidden' name='biz_content' value='{"out_trade_no":"20190918011e9d9f15eabe144","total_amount":1990,"subject":"\u4f1a\u8bae\u5ba4\u7eed\u8d39","timeout_express":"15m","product_code":"FAST_INSTANT_TRADE_PAY"}' /><input type='hidden' name='method' value='alipay.trade.page.pay' /><input type='hidden' name='sign' value='TQt8G064RcbKl/OShWlT3weB9jx3EJFUuZkjP9vEtKrNwS9PxkyNucA0SOGR/qND9/UeZL6M5hNWXW6N3KIr8iA1IwDxj8Z36Rx7ZbpIiAwrulG/XEIT0CAB1WFlBGnjKszD5crIyZeD4jkPRFKQtIwvuElWqmPeZlF8rRsTEGHHt71rkr83r6g2JmcZDTbywO6i07UV0ytrL6dYaD2FAveXGTtV0Q1Z91u1h45xd+fsG8mGUChb4Rq7UZuOEneaDwVRWlIpmIstwPbPdy1eyqCPpgasfV+cWgIrK0jOqm1e5Wgt0LD5vM4w1tN71qCsxHJ8QrIrf6YSYeqT+VGx2Q==' /><input type='submit' value='ok' style='display:none;'></form>
+    <script>
+        document.forms['alipay_submit'].submit();
+    </script>
+</body>
+
+</html>
