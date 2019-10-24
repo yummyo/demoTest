@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function aa(params) {}
+        aa.test = function(params) {}
+        console.dir(aa)
+        for (let item in aa) {
+            console.log(item)
+        }
+        Date = function(Date) {
+            function MyDate() {
+                // 当只有一个参数并且参数类型是字符串时，把字符串中的-替换为/
+                if (arguments.length === 1) {
+                    let arg = arguments[0];
+                    if (Object.prototype.toString.call(arg) === '[object String]' && arg.indexOf('T') === -1) {
+                        arguments[0] = arg.replace(/-/g, "/");
+                        // console.log(arguments[0]);
+                    }
+                }
+                let bind = Function.bind;
+                let unbind = bind.bind(bind);
+                return new(unbind(Date, null).apply(null, arguments));
+            }
+            console.dir(Date)
+
+            for (let i in Date) {
+                MyDate[i] = Date[i]
+            }
+            MyDate.prototype = Date.prototype;
+
+            return MyDate;
+
+
+        }(Date);
+        new Date()
+    </script>
+</body>
+
+</html>

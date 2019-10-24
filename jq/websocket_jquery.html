@@ -7,25 +7,37 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
-<body id="all_date">
-    <input type="text" id="test" name="test" value='123'>
-    <div class="parent">
-        <img src="./img/2.jpg" alt="">
-        <input type="text" name="" id="">
-    </div>
-    <div class="imgTest">
+<body>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="text-center">
+                <button id="btn" class="btn btn-default">demo</button>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <select class="form-control" name="" id="signal">
+                <option value="">切换信号源</option>
+                <option value="">切换信号源</option>
+            </select>
+        </div>
+        <div class="col-md-3">
+            <select class="form-control" name="" id="demo">
+                <option value="">切换demo</option>
+                <option value="">切换demo</option>
+            </select>
+        </div>
     </div>
     <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script>
-        $.ajax({
-            url: 'http://localhost:3000/users',
-            success: function(res) {
-                console.log('succes', res)
-            },
-            error: function(res) {
-                console.log('error', res)
-            }
+        $("#btn").click(function() {
+            console.log($(this))
+        })
+        $("#signal").change(function() {
+            console.log($(this))
+        })
+        $("#demo").change(function() {
+            console.log($(this))
         })
     </script>
 </body>
