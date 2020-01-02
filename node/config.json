@@ -1,0 +1,931 @@
+{
+    "home": {
+        "key": "首页",
+        "img": "./static/img/menu/SHOUYE.png"
+    },
+    "project": {
+        "key": "项目",
+        "img": "./static/img/menu/XIANGMU.png",
+        "first": {
+            "theme_culural": {
+                "key": "主题文化",
+                "img": "./static/img/home/ZHUTIWENHUA.png",
+                "second": {
+                    "贵州黔东南下司古镇": {
+                        "main_img": "./static/img/ZHUTIWENHUA/GUIZHOU/1.png",
+                        "text": [
+                            "旅游度假区文化策划、运管、营销推广"
+                        ],
+                        "time": "2019年",
+                        "children": [
+                            "./static/img/ZHUTIWENHUA/GUIZHOU/1.png",
+                            "./static/img/ZHUTIWENHUA/GUIZHOU/2.jpg",
+                            "./static/img/ZHUTIWENHUA/GUIZHOU/3.jpg",
+                            "./static/img/ZHUTIWENHUA/GUIZHOU/4.jpg",
+                            "./static/img/ZHUTIWENHUA/GUIZHOU/5.png",
+                            "./static/img/ZHUTIWENHUA/GUIZHOU/6.jpg",
+                            "./static/img/ZHUTIWENHUA/GUIZHOU/7.jpg",
+                            "./static/img/ZHUTIWENHUA/GUIZHOU/8.jpg"
+                        ]
+                    },
+                    "江湖禅小镇": {
+                        "main_img": "./static/img/ZHUTIWENHUA/JIANGHU/1.png",
+                        "text": [
+                            "“夜水乡”模式整体设计"
+                        ],
+                        "time": "2019年",
+                        "children": [
+                            "./static/img/ZHUTIWENHUA/JIANGHU/1.png",
+                            "./static/img/ZHUTIWENHUA/JIANGHU/2.png",
+                            "./static/img/ZHUTIWENHUA/JIANGHU/3.png",
+                            "./static/img/ZHUTIWENHUA/JIANGHU/4.png",
+                            "./static/img/ZHUTIWENHUA/JIANGHU/5.png",
+                            "./static/img/ZHUTIWENHUA/JIANGHU/6.png",
+                            "./static/img/ZHUTIWENHUA/JIANGHU/7.png",
+                            "./static/img/ZHUTIWENHUA/JIANGHU/8.png",
+                            "./static/img/ZHUTIWENHUA/JIANGHU/9.png"
+                        ]
+                    },
+                    "梦里徽乡西递传奇": {
+                        "main_img": "./static/img/ZHUTIWENHUA/MENGLI/1.png",
+                        "text": [
+                            "景区整体氛围打造，景区包装提升",
+                            "水幕电影，牌楼投影秀"
+                        ],
+                        "time": "2010年",
+                        "children": [
+                            "./static/img/ZHUTIWENHUA/MENGLI/1.png",
+                            "./static/img/ZHUTIWENHUA/MENGLI/2.png",
+                            "./static/img/ZHUTIWENHUA/MENGLI/3.png",
+                            "./static/img/ZHUTIWENHUA/MENGLI/4.png",
+                            "./static/img/ZHUTIWENHUA/MENGLI/5.jpg",
+                            "./static/img/ZHUTIWENHUA/MENGLI/6.jpg"
+                        ]
+                    },
+                    "象山魔幻森林": {
+                        "main_img": "./static/img/ZHUTIWENHUA/XIANGSHANG/1.jpg",
+                        "text": [
+                            "打造亚洲首个全息魔幻森林项目",
+                            "2016年度江西省最具创意文化投资项目 金奖"
+                        ],
+                        "time": "2010年",
+                        "children": [
+                            "./static/img/ZHUTIWENHUA/XIANGSHANG/1.jpg",
+                            "./static/img/ZHUTIWENHUA/XIANGSHANG/2.jpg",
+                            "./static/img/ZHUTIWENHUA/XIANGSHANG/3.jpg",
+                            "./static/img/ZHUTIWENHUA/XIANGSHANG/4.png"
+                        ]
+                    },
+                    "周庄": {
+                        "main_img": "./static/img/ZHUTIWENHUA/ZHOUZHUANG/1.png",
+                        "text": [
+                            "打造亚洲首个全息魔幻森林项目",
+                            "2016年度江西省最具创意文化投资项目 金奖"
+                        ],
+                        "time": "2010年",
+                        "children": [
+                            "./static/img/ZHUTIWENHUA/ZHOUZHUANG/1.png",
+                            "./static/img/ZHUTIWENHUA/ZHOUZHUANG/2.jpg",
+                            "./static/img/ZHUTIWENHUA/ZHOUZHUANG/3.jpg",
+                            "./static/img/ZHUTIWENHUA/ZHOUZHUANG/4.jpg",
+                            "./static/img/ZHUTIWENHUA/ZHOUZHUANG/5.jpg",
+                            "./static/img/ZHUTIWENHUA/ZHOUZHUANG/6.png",
+                            "./static/img/ZHUTIWENHUA/ZHOUZHUANG/7.jpg"
+                        ]
+                    }
+                }
+            },
+            "cutting_edge": {
+                "key": "前沿多媒体",
+                "img": "./static/img/home/QIANYANDUOMEI.png",
+                "second": {
+                    "Design module": {
+                        "main_img": "./static/img/QIANYANDUOMEI/Design module/1.jpg",
+                        "text": [],
+                        "time": "2019年",
+                        "children": [
+                            "./static/img/QIANYANDUOMEI/Design module/1.jpg",
+                            "./static/img/QIANYANDUOMEI/Design module/2.jpg",
+                            "./static/img/QIANYANDUOMEI/Design module/3.jpg"
+                        ]
+                    },
+                    "Digital Foundry": {
+                        "main_img": "./static/img/QIANYANDUOMEI/Digital Foundry/1.jpg",
+                        "text": [],
+                        "time": "2010年",
+                        "children": [
+                            "./static/img/QIANYANDUOMEI/Digital Foundry/1.jpg",
+                            "./static/img/QIANYANDUOMEI/Digital Foundry/2.jpg",
+                            "./static/img/QIANYANDUOMEI/Digital Foundry/3.jpg",
+                            "./static/img/QIANYANDUOMEI/Digital Foundry/4.jpg"
+                        ]
+                    },
+                    "GE": {
+                        "main_img": "./static/img/QIANYANDUOMEI/GE/1.jpg",
+                        "text": [],
+                        "time": "2010年",
+                        "children": [
+                            "./static/img/QIANYANDUOMEI/GE/1.jpg",
+                            "./static/img/QIANYANDUOMEI/GE/2.jpg",
+                            "./static/img/QIANYANDUOMEI/GE/3.jpg",
+                            "./static/img/QIANYANDUOMEI/GE/4.jpg",
+                            "./static/img/QIANYANDUOMEI/GE/5.jpg",
+                            "./static/img/QIANYANDUOMEI/GE/6.jpg",
+                            "./static/img/QIANYANDUOMEI/GE/7.jpg",
+                            "./static/img/QIANYANDUOMEI/GE/8.jpg",
+                            "./static/img/QIANYANDUOMEI/GE/9.jpg",
+                            "./static/img/QIANYANDUOMEI/GE/10.jpg",
+                            "./static/img/QIANYANDUOMEI/GE/11.jpg"
+                        ]
+                    },
+                    "IAS": {
+                        "main_img": "./static/img/QIANYANDUOMEI/IAS/1.jpg",
+                        "text": [],
+                        "time": "2010年",
+                        "children": [
+                            "./static/img/QIANYANDUOMEI/IAS/1.jpg",
+                            "./static/img/QIANYANDUOMEI/IAS/2.jpg",
+                            "./static/img/QIANYANDUOMEI/IAS/3.jpg",
+                            "./static/img/QIANYANDUOMEI/IAS/4.jpg",
+                            "./static/img/QIANYANDUOMEI/IAS/5.jpg",
+                            "./static/img/QIANYANDUOMEI/IAS/6.jpg",
+                            "./static/img/QIANYANDUOMEI/IAS/7.jpg",
+                            "./static/img/QIANYANDUOMEI/IAS/8.jpg",
+                            "./static/img/QIANYANDUOMEI/IAS/9.jpg",
+                            "./static/img/QIANYANDUOMEI/IAS/10.jpg",
+                            "./static/img/QIANYANDUOMEI/IAS/11.jpg",
+                            "./static/img/QIANYANDUOMEI/IAS/12.jpg",
+                            "./static/img/QIANYANDUOMEI/IAS/13.jpg",
+                            "./static/img/QIANYANDUOMEI/IAS/14.jpg",
+                            "./static/img/QIANYANDUOMEI/IAS/15.jpg",
+                            "./static/img/QIANYANDUOMEI/IAS/16.jpg",
+                            "./static/img/QIANYANDUOMEI/IAS/17.jpg",
+                            "./static/img/QIANYANDUOMEI/IAS/18.jpg"
+                        ]
+                    },
+                    "T3": {
+                        "main_img": "./static/img/QIANYANDUOMEI/T3/1.jpg",
+                        "text": [],
+                        "time": "2010年",
+                        "children": [
+                            "./static/img/QIANYANDUOMEI/T3/1.jpg",
+                            "./static/img/QIANYANDUOMEI/T3/2.jpg",
+                            "./static/img/QIANYANDUOMEI/T3/3.jpg",
+                            "./static/img/QIANYANDUOMEI/T3/4.jpg",
+                            "./static/img/QIANYANDUOMEI/T3/5.jpg",
+                            "./static/img/QIANYANDUOMEI/T3/6.jpg",
+                            "./static/img/QIANYANDUOMEI/T3/7.jpg",
+                            "./static/img/QIANYANDUOMEI/T3/8.jpg",
+                            "./static/img/QIANYANDUOMEI/T3/9.jpg",
+                            "./static/img/QIANYANDUOMEI/T3/10.jpg"
+                        ]
+                    },
+                    "波科": {
+                        "main_img": "./static/img/QIANYANDUOMEI/BOKE/1.JPG",
+                        "text": [],
+                        "time": "2010年",
+                        "children": [
+                            "./static/img/QIANYANDUOMEI/BOKE/1.JPG",
+                            "./static/img/QIANYANDUOMEI/BOKE/2.JPG",
+                            "./static/img/QIANYANDUOMEI/BOKE/3.JPG",
+                            "./static/img/QIANYANDUOMEI/BOKE/4.JPG",
+                            "./static/img/QIANYANDUOMEI/BOKE/5.JPG"
+                        ]
+                    },
+                    "波科清华创想中心": {
+                        "main_img": "./static/img/QIANYANDUOMEI/BOKEQINGHUA/1.jpg",
+                        "text": [],
+                        "time": "2010年",
+                        "children": [
+                            "./static/img/QIANYANDUOMEI/BOKEQINGHUA/1.jpg",
+                            "./static/img/QIANYANDUOMEI/BOKEQINGHUA/2.jpg",
+                            "./static/img/QIANYANDUOMEI/BOKEQINGHUA/3.jpg",
+                            "./static/img/QIANYANDUOMEI/BOKEQINGHUA/4.jpg",
+                            "./static/img/QIANYANDUOMEI/BOKEQINGHUA/5.jpg"
+                        ]
+                    },
+                    "航天第八研究院": {
+                        "main_img": "./static/img/QIANYANDUOMEI/HANGTIANDIBA/1.png",
+                        "text": [],
+                        "time": "2010年",
+                        "children": [
+                            "./static/img/QIANYANDUOMEI/HANGTIANDIBA/1.png",
+                            "./static/img/QIANYANDUOMEI/HANGTIANDIBA/2.png",
+                            "./static/img/QIANYANDUOMEI/HANGTIANDIBA/3.jpg"
+                        ]
+                    },
+                    "民生通惠": {
+                        "main_img": "./static/img/QIANYANDUOMEI/MINGSHENGTONGHUI/1.jpg",
+                        "text": [],
+                        "time": "2010年",
+                        "children": [
+                            "./static/img/QIANYANDUOMEI/MINGSHENGTONGHUI/1.jpg",
+                            "./static/img/QIANYANDUOMEI/MINGSHENGTONGHUI/2.jpg",
+                            "./static/img/QIANYANDUOMEI/MINGSHENGTONGHUI/3.jpg"
+                        ]
+                    },
+                    "通用医疗": {
+                        "main_img": "./static/img/QIANYANDUOMEI/TONGYONGYILIAO/1.jpg",
+                        "text": [],
+                        "time": "2010年",
+                        "children": [
+                            "./static/img/QIANYANDUOMEI/TONGYONGYILIAO/1.jpg",
+                            "./static/img/QIANYANDUOMEI/TONGYONGYILIAO/2.jpg",
+                            "./static/img/QIANYANDUOMEI/TONGYONGYILIAO/3.jpg",
+                            "./static/img/QIANYANDUOMEI/TONGYONGYILIAO/4.jpg",
+                            "./static/img/QIANYANDUOMEI/TONGYONGYILIAO/5.jpg",
+                            "./static/img/QIANYANDUOMEI/TONGYONGYILIAO/6.jpg",
+                            "./static/img/QIANYANDUOMEI/TONGYONGYILIAO/7.jpg",
+                            "./static/img/QIANYANDUOMEI/TONGYONGYILIAO/8.jpg",
+                            "./static/img/QIANYANDUOMEI/TONGYONGYILIAO/9.jpg",
+                            "./static/img/QIANYANDUOMEI/TONGYONGYILIAO/10.jpg",
+                            "./static/img/QIANYANDUOMEI/TONGYONGYILIAO/11.jpg",
+                            "./static/img/QIANYANDUOMEI/TONGYONGYILIAO/12.jpg",
+                            "./static/img/QIANYANDUOMEI/TONGYONGYILIAO/13.jpg",
+                            "./static/img/QIANYANDUOMEI/TONGYONGYILIAO/14.jpg"
+                        ]
+                    }
+                }
+            },
+            "meeting": {
+                "key": "会议",
+                "img": "./static/img/home/HUIYI.png",
+                "second": {
+                    "Boardroom": {
+                        "main_img": "./static/img/HUIYI/Boardroom/1.jpg",
+                        "text": [],
+                        "time": "2019年",
+                        "children": [
+                            "./static/img/HUIYI/Boardroom/1.jpg",
+                            "./static/img/HUIYI/Boardroom/2.jpg",
+                            "./static/img/HUIYI/Boardroom/3.jpg",
+                            "./static/img/HUIYI/Boardroom/4.jpg",
+                            "./static/img/HUIYI/Boardroom/5.jpg",
+                            "./static/img/HUIYI/Boardroom/6.jpg"
+                        ]
+                    },
+                    "报告厅": {
+                        "main_img": "./static/img/HUIYI/BAOGAO/1.jpg",
+                        "text": [],
+                        "time": "2019年",
+                        "children": [
+                            "./static/img/HUIYI/BAOGAO/1.jpg",
+                            "./static/img/HUIYI/BAOGAO/2.jpg",
+                            "./static/img/HUIYI/BAOGAO/3.jpg",
+                            "./static/img/HUIYI/BAOGAO/4.jpg",
+                            "./static/img/HUIYI/BAOGAO/5.jpg",
+                            "./static/img/HUIYI/BAOGAO/6.jpg"
+                        ]
+                    },
+                    "培训室": {
+                        "main_img": "./static/img/HUIYI/PEIXUN/1.jpeg",
+                        "text": [],
+                        "time": "2019年",
+                        "children": [
+                            "./static/img/HUIYI/PEIXUN/1.jpeg",
+                            "./static/img/HUIYI/PEIXUN/2.jpeg",
+                            "./static/img/HUIYI/PEIXUN/3.jpeg",
+                            "./static/img/HUIYI/PEIXUN/4.jpg",
+                            "./static/img/HUIYI/PEIXUN/5.jpg",
+                            "./static/img/HUIYI/PEIXUN/6.png",
+                            "./static/img/HUIYI/PEIXUN/7.png",
+                            "./static/img/HUIYI/PEIXUN/8.jpg",
+                            "./static/img/HUIYI/PEIXUN/9.jpg",
+                            "./static/img/HUIYI/PEIXUN/10.jpg",
+                            "./static/img/HUIYI/PEIXUN/11.jpg",
+                            "./static/img/HUIYI/PEIXUN/12.jpg",
+                            "./static/img/HUIYI/PEIXUN/13.jpg",
+                            "./static/img/HUIYI/PEIXUN/14.jpg",
+                            "./static/img/HUIYI/PEIXUN/15.jpg",
+                            "./static/img/HUIYI/PEIXUN/16.jpg",
+                            "./static/img/HUIYI/PEIXUN/17.jpg"
+                        ]
+                    },
+                    "三合一会议室": {
+                        "main_img": "./static/img/HUIYI/SANHE/1.jpg",
+                        "text": [],
+                        "time": "2019年",
+                        "children": [
+                            "./static/img/HUIYI/SANHE/1.jpg",
+                            "./static/img/HUIYI/SANHE/2.jpg"
+                        ]
+                    },
+                    "视频会议室": {
+                        "main_img": "./static/img/HUIYI/SHIPING/1.jpeg",
+                        "text": [],
+                        "time": "2019年",
+                        "children": [
+                            "./static/img/HUIYI/SHIPING/1.jpeg",
+                            "./static/img/HUIYI/SHIPING/2.jpeg",
+                            "./static/img/HUIYI/SHIPING/3.jpeg",
+                            "./static/img/HUIYI/SHIPING/4.jpg",
+                            "./static/img/HUIYI/SHIPING/5.jpg",
+                            "./static/img/HUIYI/SHIPING/6.jpg",
+                            "./static/img/HUIYI/SHIPING/7.jpg",
+                            "./static/img/HUIYI/SHIPING/8.jpg",
+                            "./static/img/HUIYI/SHIPING/9.jpg",
+                            "./static/img/HUIYI/SHIPING/10.jpg",
+                            "./static/img/HUIYI/SHIPING/11.jpg",
+                            "./static/img/HUIYI/SHIPING/12.jpg",
+                            "./static/img/HUIYI/SHIPING/13.jpg",
+                            "./static/img/HUIYI/SHIPING/14.jpg",
+                            "./static/img/HUIYI/SHIPING/15.jpg",
+                            "./static/img/HUIYI/SHIPING/16.jpg",
+                            "./static/img/HUIYI/SHIPING/17.jpg",
+                            "./static/img/HUIYI/SHIPING/18.jpg",
+                            "./static/img/HUIYI/SHIPING/19.jpg",
+                            "./static/img/HUIYI/SHIPING/20.jpg",
+                            "./static/img/HUIYI/SHIPING/21.jpg",
+                            "./static/img/HUIYI/SHIPING/21.jpg",
+                            "./static/img/HUIYI/SHIPING/22.jpg",
+                            "./static/img/HUIYI/SHIPING/23.jpeg",
+                            "./static/img/HUIYI/SHIPING/24.jpg",
+                            "./static/img/HUIYI/SHIPING/25.jpg",
+                            "./static/img/HUIYI/SHIPING/26.jpg",
+                            "./static/img/HUIYI/SHIPING/27.jpg"
+                        ]
+                    },
+                    "网真会议室": {
+                        "main_img": "./static/img/HUIYI/WANGZHEN/1.jpeg",
+                        "text": [],
+                        "time": "2019年",
+                        "children": [
+                            "./static/img/HUIYI/WANGZHEN/1.jpeg",
+                            "./static/img/HUIYI/WANGZHEN/2.JPG"
+                        ]
+                    },
+                    "指挥中心": {
+                        "main_img": "./static/img/HUIYI/ZHIHUI/1.jpeg",
+                        "text": [],
+                        "time": "2019年",
+                        "children": [
+                            "./static/img/HUIYI/ZHIHUI/1.jpeg",
+                            "./static/img/HUIYI/ZHIHUI/2.jpeg",
+                            "./static/img/HUIYI/ZHIHUI/3.jpg"
+                        ]
+                    },
+                    "中小会议室": {
+                        "main_img": "./static/img/HUIYI/ZHONGXIAO/1.jpg",
+                        "text": [],
+                        "time": "2019年",
+                        "children": [
+                            "./static/img/HUIYI/ZHONGXIAO/1.jpg",
+                            "./static/img/HUIYI/ZHONGXIAO/2.jpg",
+                            "./static/img/HUIYI/ZHONGXIAO/3.jpg",
+                            "./static/img/HUIYI/ZHONGXIAO/4.jpg",
+                            "./static/img/HUIYI/ZHONGXIAO/5.jpg",
+                            "./static/img/HUIYI/ZHONGXIAO/6.jpg",
+                            "./static/img/HUIYI/ZHONGXIAO/7.jpg",
+                            "./static/img/HUIYI/ZHONGXIAO/8.jpg",
+                            "./static/img/HUIYI/ZHONGXIAO/9.jpg",
+                            "./static/img/HUIYI/ZHONGXIAO/10.jpg",
+                            "./static/img/HUIYI/ZHONGXIAO/11.jpg",
+                            "./static/img/HUIYI/ZHONGXIAO/12.jpg",
+                            "./static/img/HUIYI/ZHONGXIAO/13.jpg"
+                        ]
+                    }
+                }
+            },
+            "Intelligent_office": {
+                "key": "智能办公",
+                "img": "./static/img/home/ZHINENGBANGONG.png",
+                "second": {
+                    "智能办公": {
+                        "main_img": "./static/img/test.png",
+                        "text": [
+                            "前沿1管理有限公司于2004年5月正式成立"
+                        ],
+                        "time": "2019年",
+                        "children": [
+                            "./static/img/test.png",
+                            "./static/img/test.png",
+                            "./static/img/test.png"
+                        ]
+                    }
+                }
+            },
+            "space": {
+                "key": "商业空间",
+                "img": "./static/img/home/SHANGYEKONGJIAN.png",
+                "second": {
+                    "maru酒吧": {
+                        "main_img": "./static/img/test.jpg",
+                        "text": [],
+                        "time": "2019年",
+                        "children": [
+                            "./static/img/test.jpg"
+                        ]
+                    },
+                    "SITE02_-_龙湖领导力中心二期": {
+                        "main_img": "./static/img/SHANGYEKONGJIAN/LONGHU/1.jpg",
+                        "text": [],
+                        "time": "2019年",
+                        "children": [
+                            "./static/img/SHANGYEKONGJIAN/LONGHU/1.jpg",
+                            "./static/img/SHANGYEKONGJIAN/LONGHU/2.jpg",
+                            "./static/img/SHANGYEKONGJIAN/LONGHU/3.jpg",
+                            "./static/img/SHANGYEKONGJIAN/LONGHU/4.jpg",
+                            "./static/img/SHANGYEKONGJIAN/LONGHU/5.jpg",
+                            "./static/img/SHANGYEKONGJIAN/LONGHU/6.jpg",
+                            "./static/img/SHANGYEKONGJIAN/LONGHU/7.jpg",
+                            "./static/img/SHANGYEKONGJIAN/LONGHU/8.jpg",
+                            "./static/img/SHANGYEKONGJIAN/LONGHU/9.jpg",
+                            "./static/img/SHANGYEKONGJIAN/LONGHU/10.jpg",
+                            "./static/img/SHANGYEKONGJIAN/LONGHU/11.jpg",
+                            "./static/img/SHANGYEKONGJIAN/LONGHU/12.jpg",
+                            "./static/img/SHANGYEKONGJIAN/LONGHU/13.jpg",
+                            "./static/img/SHANGYEKONGJIAN/LONGHU/14.jpg",
+                            "./static/img/SHANGYEKONGJIAN/LONGHU/15.jpg",
+                            "./static/img/SHANGYEKONGJIAN/LONGHU/16.jpg",
+                            "./static/img/SHANGYEKONGJIAN/LONGHU/17.jpg",
+                            "./static/img/SHANGYEKONGJIAN/LONGHU/18.jpg",
+                            "./static/img/SHANGYEKONGJIAN/LONGHU/19.jpg",
+                            "./static/img/SHANGYEKONGJIAN/LONGHU/20.jpg"
+                        ]
+                    },
+                    "SITE02_-_青岛万科城市生活馆": {
+                        "main_img": "./static/img/SHANGYEKONGJIAN/QINGDAO/1.jpg",
+                        "text": [],
+                        "time": "2019年",
+                        "children": [
+                            "./static/img/SHANGYEKONGJIAN/QINGDAO/1.jpg",
+                            "./static/img/SHANGYEKONGJIAN/QINGDAO/2.jpg",
+                            "./static/img/SHANGYEKONGJIAN/QINGDAO/3.jpg",
+                            "./static/img/SHANGYEKONGJIAN/QINGDAO/4.jpg",
+                            "./static/img/SHANGYEKONGJIAN/QINGDAO/5.jpg",
+                            "./static/img/SHANGYEKONGJIAN/QINGDAO/6.jpg",
+                            "./static/img/SHANGYEKONGJIAN/QINGDAO/7.jpg",
+                            "./static/img/SHANGYEKONGJIAN/QINGDAO/8.jpg",
+                            "./static/img/SHANGYEKONGJIAN/QINGDAO/9.jpg",
+                            "./static/img/SHANGYEKONGJIAN/QINGDAO/10.jpg",
+                            "./static/img/SHANGYEKONGJIAN/QINGDAO/11.jpg",
+                            "./static/img/SHANGYEKONGJIAN/QINGDAO/12.jpg",
+                            "./static/img/SHANGYEKONGJIAN/QINGDAO/13.jpg",
+                            "./static/img/SHANGYEKONGJIAN/QINGDAO/14.jpg",
+                            "./static/img/SHANGYEKONGJIAN/QINGDAO/15.jpg",
+                            "./static/img/SHANGYEKONGJIAN/QINGDAO/16.jpg",
+                            "./static/img/SHANGYEKONGJIAN/QINGDAO/17.jpg",
+                            "./static/img/SHANGYEKONGJIAN/QINGDAO/18.jpg",
+                            "./static/img/SHANGYEKONGJIAN/QINGDAO/19.jpg",
+                            "./static/img/SHANGYEKONGJIAN/QINGDAO/20.jpg"
+                        ]
+                    },
+                    "SITE02_-_上海腾飞浦汇大厦大堂改造": {
+                        "main_img": "./static/img/SHANGYEKONGJIAN/SHANGHAITENGFEI/1.jpg",
+                        "text": [],
+                        "time": "2019年",
+                        "children": [
+                            "./static/img/SHANGYEKONGJIAN/SHANGHAITENGFEI/1.jpg",
+                            "./static/img/SHANGYEKONGJIAN/SHANGHAITENGFEI/2.jpg",
+                            "./static/img/SHANGYEKONGJIAN/SHANGHAITENGFEI/3.jpg",
+                            "./static/img/SHANGYEKONGJIAN/SHANGHAITENGFEI/4.jpg",
+                            "./static/img/SHANGYEKONGJIAN/SHANGHAITENGFEI/5.jpg",
+                            "./static/img/SHANGYEKONGJIAN/SHANGHAITENGFEI/6.jpg",
+                            "./static/img/SHANGYEKONGJIAN/SHANGHAITENGFEI/7.jpg",
+                            "./static/img/SHANGYEKONGJIAN/SHANGHAITENGFEI/8.jpg",
+                            "./static/img/SHANGYEKONGJIAN/SHANGHAITENGFEI/9.jpg",
+                            "./static/img/SHANGYEKONGJIAN/SHANGHAITENGFEI/10.jpg",
+                            "./static/img/SHANGYEKONGJIAN/SHANGHAITENGFEI/11.jpg",
+                            "./static/img/SHANGYEKONGJIAN/SHANGHAITENGFEI/12.jpg",
+                            "./static/img/SHANGYEKONGJIAN/SHANGHAITENGFEI/13.jpg",
+                            "./static/img/SHANGYEKONGJIAN/SHANGHAITENGFEI/14.jpg"
+                        ]
+                    },
+                    "SITE02_-_万科大象山舍接待中心": {
+                        "main_img": "./static/img/SHANGYEKONGJIAN/WANKE/1.jpg",
+                        "text": [],
+                        "time": "2019年",
+                        "children": [
+                            "./static/img/SHANGYEKONGJIAN/WANKE/1.jpg",
+                            "./static/img/SHANGYEKONGJIAN/WANKE/2.jpg",
+                            "./static/img/SHANGYEKONGJIAN/WANKE/3.jpg",
+                            "./static/img/SHANGYEKONGJIAN/WANKE/4.jpg",
+                            "./static/img/SHANGYEKONGJIAN/WANKE/5.jpg",
+                            "./static/img/SHANGYEKONGJIAN/WANKE/6.jpg",
+                            "./static/img/SHANGYEKONGJIAN/WANKE/7.jpg",
+                            "./static/img/SHANGYEKONGJIAN/WANKE/8.jpg",
+                            "./static/img/SHANGYEKONGJIAN/WANKE/9.jpg",
+                            "./static/img/SHANGYEKONGJIAN/WANKE/10.jpg",
+                            "./static/img/SHANGYEKONGJIAN/WANKE/11.jpg",
+                            "./static/img/SHANGYEKONGJIAN/WANKE/12.jpg",
+                            "./static/img/SHANGYEKONGJIAN/WANKE/13.jpg"
+                        ]
+                    },
+                    "大众汽车": {
+                        "main_img": "./static/img/SHANGYEKONGJIAN/DAZHONG/1.jpg",
+                        "text": [],
+                        "time": "2019年",
+                        "children": [
+                            "./static/img/SHANGYEKONGJIAN/DAZHONG/1.jpg",
+                            "./static/img/SHANGYEKONGJIAN/DAZHONG/2.jpg",
+                            "./static/img/SHANGYEKONGJIAN/DAZHONG/3.jpg",
+                            "./static/img/SHANGYEKONGJIAN/DAZHONG/4.jpg",
+                            "./static/img/SHANGYEKONGJIAN/DAZHONG/5.jpg",
+                            "./static/img/SHANGYEKONGJIAN/DAZHONG/6.jpg",
+                            "./static/img/SHANGYEKONGJIAN/DAZHONG/7.jpg",
+                            "./static/img/SHANGYEKONGJIAN/DAZHONG/8.jpg",
+                            "./static/img/SHANGYEKONGJIAN/DAZHONG/9.jpg",
+                            "./static/img/SHANGYEKONGJIAN/DAZHONG/10.jpg"
+                        ]
+                    },
+                    "第二届世界人工智能大会": {
+                        "main_img": "./static/img/SHANGYEKONGJIAN/DIERJIE/2.jpg",
+                        "text": [
+                            "2019年8月29",
+                            "13个会场"
+                        ],
+                        "time": "2019年绵羊",
+                        "children": [
+                            "./static/img/SHANGYEKONGJIAN/DIERJIE/2.jpg",
+                            "./static/img/SHANGYEKONGJIAN/DIERJIE/3.jpg",
+                            "./static/img/SHANGYEKONGJIAN/DIERJIE/4.jpg",
+                            "./static/img/SHANGYEKONGJIAN/DIERJIE/5.jpg",
+                            "./static/img/SHANGYEKONGJIAN/DIERJIE/6.jpg",
+                            "./static/img/SHANGYEKONGJIAN/DIERJIE/7.jpg",
+                            "./static/img/SHANGYEKONGJIAN/DIERJIE/8.jpg",
+                            "./static/img/SHANGYEKONGJIAN/DIERJIE/9.jpg",
+                            "./static/img/SHANGYEKONGJIAN/DIERJIE/10.jpg",
+                            "./static/img/SHANGYEKONGJIAN/DIERJIE/11.jpg",
+                            "./static/img/SHANGYEKONGJIAN/DIERJIE/12.jpg",
+                            "./static/img/SHANGYEKONGJIAN/DIERJIE/13.jpg",
+                            "./static/img/SHANGYEKONGJIAN/DIERJIE/14.jpg",
+                            "./static/img/SHANGYEKONGJIAN/DIERJIE/15.jpg",
+                            "./static/img/SHANGYEKONGJIAN/DIERJIE/16.jpg",
+                            "./static/img/SHANGYEKONGJIAN/DIERJIE/17.jpg",
+                            "./static/img/SHANGYEKONGJIAN/DIERJIE/18.jpg",
+                            "./static/img/SHANGYEKONGJIAN/DIERJIE/19.jpg",
+                            "./static/img/SHANGYEKONGJIAN/DIERJIE/20.jpg"
+                        ]
+                    },
+                    "好秀": {
+                        "main_img": "./static/img/SHANGYEKONGJIAN/HAOXIU/1.jpg",
+                        "text": [],
+                        "time": "2019年",
+                        "children": [
+                            "./static/img/SHANGYEKONGJIAN/HAOXIU/1.jpg"
+                        ]
+                    },
+                    "横店上海滩百老汇剧场": {
+                        "main_img": "./static/img/SHANGYEKONGJIAN/HENGDIAN/4.jpg",
+                        "text": [],
+                        "time": "2019年绵羊",
+                        "children": [
+                            "./static/img/SHANGYEKONGJIAN/HENGDIAN/4.jpg",
+                            "./static/img/SHANGYEKONGJIAN/HENGDIAN/5.jpg",
+                            "./static/img/SHANGYEKONGJIAN/HENGDIAN/6.jpg",
+                            "./static/img/SHANGYEKONGJIAN/HENGDIAN/7.jpg",
+                            "./static/img/SHANGYEKONGJIAN/HENGDIAN/8.jpg",
+                            "./static/img/SHANGYEKONGJIAN/HENGDIAN/9.jpg",
+                            "./static/img/SHANGYEKONGJIAN/HENGDIAN/10.jpg",
+                            "./static/img/SHANGYEKONGJIAN/HENGDIAN/11.jpg",
+                            "./static/img/SHANGYEKONGJIAN/HENGDIAN/12.jpg",
+                            "./static/img/SHANGYEKONGJIAN/HENGDIAN/13.jpg",
+                            "./static/img/SHANGYEKONGJIAN/HENGDIAN/14.jpg",
+                            "./static/img/SHANGYEKONGJIAN/HENGDIAN/15.jpg",
+                            "./static/img/SHANGYEKONGJIAN/HENGDIAN/16.jpg",
+                            "./static/img/SHANGYEKONGJIAN/HENGDIAN/17.jpg",
+                            "./static/img/SHANGYEKONGJIAN/HENGDIAN/18.jpg",
+                            "./static/img/SHANGYEKONGJIAN/HENGDIAN/19.jpg",
+                            "./static/img/SHANGYEKONGJIAN/HENGDIAN/20.jpg",
+                            "./static/img/SHANGYEKONGJIAN/HENGDIAN/20.jpg",
+                            "./static/img/SHANGYEKONGJIAN/HENGDIAN/21.jpg",
+                            "./static/img/SHANGYEKONGJIAN/HENGDIAN/22.jpg",
+                            "./static/img/SHANGYEKONGJIAN/HENGDIAN/23.jpg",
+                            "./static/img/SHANGYEKONGJIAN/HENGDIAN/24.jpg",
+                            "./static/img/SHANGYEKONGJIAN/HENGDIAN/25.jpg",
+                            "./static/img/SHANGYEKONGJIAN/HENGDIAN/26.jpg",
+                            "./static/img/SHANGYEKONGJIAN/HENGDIAN/27.jpg",
+                            "./static/img/SHANGYEKONGJIAN/HENGDIAN/28.jpg",
+                            "./static/img/SHANGYEKONGJIAN/HENGDIAN/29.jpg",
+                            "./static/img/SHANGYEKONGJIAN/HENGDIAN/30.jpg",
+                            "./static/img/SHANGYEKONGJIAN/HENGDIAN/31.jpg",
+                            "./static/img/SHANGYEKONGJIAN/HENGDIAN/32.jpg",
+                            "./static/img/SHANGYEKONGJIAN/HENGDIAN/33.jpg",
+                            "./static/img/SHANGYEKONGJIAN/HENGDIAN/34.jpg",
+                            "./static/img/SHANGYEKONGJIAN/HENGDIAN/35.jpg",
+                            "./static/img/SHANGYEKONGJIAN/HENGDIAN/36.jpg",
+                            "./static/img/SHANGYEKONGJIAN/HENGDIAN/37.jpg",
+                            "./static/img/SHANGYEKONGJIAN/HENGDIAN/38.jpg",
+                            "./static/img/SHANGYEKONGJIAN/HENGDIAN/39.jpg",
+                            "./static/img/SHANGYEKONGJIAN/HENGDIAN/40.jpg",
+                            "./static/img/SHANGYEKONGJIAN/HENGDIAN/41.jpg",
+                            "./static/img/SHANGYEKONGJIAN/HENGDIAN/42.jpg",
+                            "./static/img/SHANGYEKONGJIAN/HENGDIAN/43.jpg",
+                            "./static/img/SHANGYEKONGJIAN/HENGDIAN/44.jpg",
+                            "./static/img/SHANGYEKONGJIAN/HENGDIAN/45.jpg",
+                            "./static/img/SHANGYEKONGJIAN/HENGDIAN/46.jpg",
+                            "./static/img/SHANGYEKONGJIAN/HENGDIAN/47.jpg",
+                            "./static/img/SHANGYEKONGJIAN/HENGDIAN/48.jpg",
+                            "./static/img/SHANGYEKONGJIAN/HENGDIAN/49.jpg",
+                            "./static/img/SHANGYEKONGJIAN/HENGDIAN/50.jpg",
+                            "./static/img/SHANGYEKONGJIAN/HENGDIAN/51.jpg",
+                            "./static/img/SHANGYEKONGJIAN/HENGDIAN/52.jpg",
+                            "./static/img/SHANGYEKONGJIAN/HENGDIAN/53.jpg",
+                            "./static/img/SHANGYEKONGJIAN/HENGDIAN/54.jpg"
+                        ]
+                    },
+                    "进博会": {
+                        "main_img": "./static/img/SHANGYEKONGJIAN/JINGBO/1.jpg",
+                        "text": [
+                            "阿酷司扩声系统进场！进博会128国外长晚宴，完成政治任务，保驾护航！",
+                            "国宴的标准就是整齐划一心中有条线，每个细节都是百倍付出",
+                            "换场地，责任艰巨进博会继续完成任务"
+                        ],
+                        "time": "2019年",
+                        "children": [
+                            "./static/img/SHANGYEKONGJIAN/JINGBO/1.jpg",
+                            "./static/img/SHANGYEKONGJIAN/JINGBO/2.jpg",
+                            "./static/img/SHANGYEKONGJIAN/JINGBO/3.jpg",
+                            "./static/img/SHANGYEKONGJIAN/JINGBO/4.jpg",
+                            "./static/img/SHANGYEKONGJIAN/JINGBO/5.jpg",
+                            "./static/img/SHANGYEKONGJIAN/JINGBO/6.jpg",
+                            "./static/img/SHANGYEKONGJIAN/JINGBO/7.jpg",
+                            "./static/img/SHANGYEKONGJIAN/JINGBO/8.jpg",
+                            "./static/img/SHANGYEKONGJIAN/JINGBO/9.jpg",
+                            "./static/img/SHANGYEKONGJIAN/JINGBO/10.jpg",
+                            "./static/img/SHANGYEKONGJIAN/JINGBO/11.jpg",
+                            "./static/img/SHANGYEKONGJIAN/JINGBO/12.jpg"
+                        ]
+                    },
+                    "某个会所": {
+                        "main_img": "./static/img/SHANGYEKONGJIAN/MOUGEHUISUO/1.jpg",
+                        "text": [],
+                        "time": "2019年",
+                        "children": [
+                            "./static/img/SHANGYEKONGJIAN/MOUGEHUISUO/1.jpg",
+                            "./static/img/SHANGYEKONGJIAN/MOUGEHUISUO/2.jpg",
+                            "./static/img/SHANGYEKONGJIAN/MOUGEHUISUO/3.jpg",
+                            "./static/img/SHANGYEKONGJIAN/MOUGEHUISUO/4.jpg",
+                            "./static/img/SHANGYEKONGJIAN/MOUGEHUISUO/5.jpg",
+                            "./static/img/SHANGYEKONGJIAN/MOUGEHUISUO/6.jpg"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "solution": {
+        "key": "解决方案",
+        "img": "./static/img/menu/JIEJUEFANGAN.png",
+        "first": {
+            "theme_culural": {
+                "key": "theme_culural",
+                "img": "./static/img/test.png",
+                "second": {
+                    "工程标题1": {
+                        "main_img": "./static/img/test.png",
+                        "text": [
+                            "投摩根基金管理有限公司于2004年5月正式成立"
+                        ],
+                        "time": "2019年",
+                        "children": [
+                            "./static/img/test.png",
+                            "./static/img/test.png",
+                            "./static/img/test.png"
+                        ]
+                    }
+                }
+            },
+            "cutting_edge": {
+                "key": "cutting_edge",
+                "img": "./static/img/test.png",
+                "second": {
+                    "前沿工程标题1": {
+                        "main_img": "./static/img/test.png",
+                        "text": [
+                            "前沿1管理有限公司于2004年5月正式成立"
+                        ],
+                        "time": "2019年",
+                        "children": [
+                            "./static/img/test.png",
+                            "./static/img/test.png",
+                            "./static/img/test.png"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "client": {
+        "key": "行业/客户",
+        "img": "./static/img/menu/HANGYEKEHU.png",
+        "first": {
+            "Industrial": {
+                "key": "工业",
+                "img": "./static/img/test.png",
+                "second": {
+                    "BHGE": {
+                        "main_img": "./static/img/Industrial/BHGE/1.jpg",
+                        "text": [],
+                        "time": "2019年",
+                        "children": [
+                            "./static/img/Industrial/BHGE/1.jpg",
+                            "./static/img/Industrial/BHGE/2.jpg",
+                            "./static/img/Industrial/BHGE/3.jpg",
+                            "./static/img/Industrial/BHGE/4.jpg",
+                            "./static/img/Industrial/BHGE/5.jpg",
+                            "./static/img/Industrial/BHGE/6.jpg",
+                            "./static/img/Industrial/BHGE/7.jpg",
+                            "./static/img/Industrial/BHGE/8.jpg",
+                            "./static/img/Industrial/BHGE/9.jpg",
+                            "./static/img/Industrial/BHGE/10.jpg",
+                            "./static/img/Industrial/BHGE/11.jpg",
+                            "./static/img/Industrial/BHGE/12.jpg",
+                            "./static/img/Industrial/BHGE/13.jpg"
+                        ]
+                    },
+                    "DSM": {
+                        "main_img": "./static/img/Industrial/DSM/1.jpg",
+                        "text": [],
+                        "time": "2019年",
+                        "children": [
+                            "./static/img/Industrial/DSM/1.jpg",
+                            "./static/img/Industrial/DSM/2.png"
+                        ]
+                    },
+                    "GE研发中心": {
+                        "main_img": "./static/img/Industrial/GE/1.jpg",
+                        "text": [],
+                        "time": "2019年",
+                        "children": [
+                            "./static/img/Industrial/GE/1.jpg",
+                            "./static/img/Industrial/GE/2.jpg",
+                            "./static/img/Industrial/GE/3.jpg",
+                            "./static/img/Industrial/GE/4.jpg",
+                            "./static/img/Industrial/GE/5.jpg",
+                            "./static/img/Industrial/GE/6.jpg"
+                        ]
+                    },
+                    "道康宁": {
+                        "main_img": "./static/img/Industrial/DAOKANG/1.jpg",
+                        "text": [],
+                        "time": "2019年",
+                        "children": [
+                            "./static/img/Industrial/DAOKANG/1.jpg",
+                            "./static/img/Industrial/DAOKANG/2.png"
+                        ]
+                    },
+                    "欧瑞康": {
+                        "main_img": "./static/img/Industrial/OURUI/1.png",
+                        "text": [],
+                        "time": "2019年",
+                        "children": [
+                            "./static/img/Industrial/OURUI/1.png",
+                            "./static/img/Industrial/OURUI/2.jpg"
+                        ]
+                    },
+                    "通用能源办公室": {
+                        "main_img": "./static/img/Industrial/TONGYONGNENGYUAN/1.jpg",
+                        "text": [],
+                        "time": "2019年",
+                        "children": [
+                            "./static/img/Industrial/TONGYONGNENGYUAN/1.jpg",
+                            "./static/img/Industrial/TONGYONGNENGYUAN/2.jpg",
+                            "./static/img/Industrial/TONGYONGNENGYUAN/3.jpg",
+                            "./static/img/Industrial/TONGYONGNENGYUAN/4.jpg",
+                            "./static/img/Industrial/TONGYONGNENGYUAN/5.jpg",
+                            "./static/img/Industrial/TONGYONGNENGYUAN/6.jpg",
+                            "./static/img/Industrial/TONGYONGNENGYUAN/7.jpg",
+                            "./static/img/Industrial/TONGYONGNENGYUAN/8.jpg"
+                        ]
+                    }
+                }
+            },
+            "Medical": {
+                "key": "医疗",
+                "img": "./static/img/test.png",
+                "second": {
+                    "北京波科T3创新中心": {
+                        "main_img": "./static/img/YILIAO/BEIJINGBOKE/1.jpg",
+                        "text": [],
+                        "time": "2019年",
+                        "children": [
+                            "./static/img/Industrial/BEIJINGBOKE/1.jpg",
+                            "./static/img/Industrial/BEIJINGBOKE/2.jpg",
+                            "./static/img/Industrial/BEIJINGBOKE/3.jpg",
+                            "./static/img/Industrial/BEIJINGBOKE/4.jpg",
+                            "./static/img/Industrial/BEIJINGBOKE/5.jpg"
+                        ]
+                    },
+                    "波科": {
+                        "main_img": "./static/img/YILIAO/BOKE/1.JPG",
+                        "text": [],
+                        "time": "2019年",
+                        "children": [
+                            "./static/img/YILIAO/BOKE/1.JPG",
+                            "./static/img/YILIAO/BOKE/2.JPG",
+                            "./static/img/YILIAO/BOKE/3.JPG",
+                            "./static/img/YILIAO/BOKE/4.JPG",
+                            "./static/img/YILIAO/BOKE/5.JPG",
+                            "./static/img/YILIAO/BOKE/6.JPG",
+                            "./static/img/YILIAO/BOKE/7.JPG",
+                            "./static/img/YILIAO/BOKE/8.JPG",
+                            "./static/img/YILIAO/BOKE/9.JPG",
+                            "./static/img/YILIAO/BOKE/10.JPG"
+                        ]
+                    },
+                    "波科&清华创想中心": {
+                        "main_img": "./static/img/YILIAO/BOKEQINGHUA/1.jpg",
+                        "text": [],
+                        "time": "2019年",
+                        "children": [
+                            "./static/img/YILIAO/BOKEQINGHUA/1.jpg",
+                            "./static/img/YILIAO/BOKEQINGHUA/2.jpg",
+                            "./static/img/YILIAO/BOKEQINGHUA/3.jpg",
+                            "./static/img/YILIAO/BOKEQINGHUA/4.jpg",
+                            "./static/img/YILIAO/BOKEQINGHUA/5.jpg",
+                            "./static/img/YILIAO/BOKEQINGHUA/6.jpg"
+                        ]
+                    },
+                    "波科35F  IAS": {
+                        "main_img": "./static/img/YILIAO/BOKE35F/1.jpg",
+                        "text": [],
+                        "time": "2019年",
+                        "children": [
+                            "./static/img/YILIAO/BOKE35F/1.jpg",
+                            "./static/img/YILIAO/BOKE35F/2.jpg",
+                            "./static/img/YILIAO/BOKE35F/3.jpg",
+                            "./static/img/YILIAO/BOKE35F/4.jpg",
+                            "./static/img/YILIAO/BOKE35F/5.jpg",
+                            "./static/img/YILIAO/BOKE35F/6.jpg",
+                            "./static/img/YILIAO/BOKE35F/7.jpg",
+                            "./static/img/YILIAO/BOKE35F/8.jpg",
+                            "./static/img/YILIAO/BOKE35F/9.jpg",
+                            "./static/img/YILIAO/BOKE35F/10.jpg"
+                        ]
+                    },
+                    "波科北京润世中心": {
+                        "main_img": "./static/img/YILIAO/BOKEBEIJING/1.PNG",
+                        "text": [],
+                        "time": "2019年",
+                        "children": [
+                            "./static/img/YILIAO/BOKEQINGHUA/1.jpg",
+                            "./static/img/YILIAO/BOKEQINGHUA/2.jpg",
+                            "./static/img/YILIAO/BOKEQINGHUA/3.jpg",
+                            "./static/img/YILIAO/BOKEQINGHUA/4.jpg",
+                            "./static/img/YILIAO/BOKEQINGHUA/5.jpg",
+                            "./static/img/YILIAO/BOKEQINGHUA/6.jpg"
+                        ]
+                    },
+                    "波科&清华创想中心12": {
+                        "main_img": "./static/img/YILIAO/BOKEQINGHUA/1.jpg",
+                        "text": [],
+                        "time": "2019年",
+                        "children": [
+                            "./static/img/YILIAO/BOKEQINGHUA/1.jpg",
+                            "./static/img/YILIAO/BOKEQINGHUA/2.jpg",
+                            "./static/img/YILIAO/BOKEQINGHUA/3.jpg",
+                            "./static/img/YILIAO/BOKEQINGHUA/4.jpg",
+                            "./static/img/YILIAO/BOKEQINGHUA/5.jpg",
+                            "./static/img/YILIAO/BOKEQINGHUA/6.jpg"
+                        ]
+                    },
+                    "波科&清华创想中心13": {
+                        "main_img": "./static/img/YILIAO/BOKEQINGHUA/1.jpg",
+                        "text": [],
+                        "time": "2019年",
+                        "children": [
+                            "./static/img/YILIAO/BOKEQINGHUA/1.jpg",
+                            "./static/img/YILIAO/BOKEQINGHUA/2.jpg",
+                            "./static/img/YILIAO/BOKEQINGHUA/3.jpg",
+                            "./static/img/YILIAO/BOKEQINGHUA/4.jpg",
+                            "./static/img/YILIAO/BOKEQINGHUA/5.jpg",
+                            "./static/img/YILIAO/BOKEQINGHUA/6.jpg"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "aboutUs": {
+        "key": "关于我们",
+        "img": "./static/img/menu/GUANYUWOMEN.png",
+        "special": {
+            "describe": {
+                "key": "公司简介",
+                "img": "./static/img/about/logo.png",
+                "img2": "./static/img/about/1.png",
+                "max_text": "兆翌",
+                "text": "电子由一批具有AV资深设计和系统集成经验的专业人士共同创办，隶属UNITYS机构成员之一。兆翌团队特别擅长于医学及教育领域的学术中心、多媒体会议中心、报告厅及音视频远程通信解决方案的整体设计和系统集成。"
+            },
+            "qualification": {
+                "key": "资质认证",
+                "img": [
+                    "./static/img/about/1.png",
+                    "./static/img/about/1.png"
+                ]
+            },
+            "contactUs": {
+                "key": "联系我们",
+                "img": "./static/img/about/2.png",
+                "text": {
+                    "place": "成都",
+                    "address": "地址：四川省成都市锦江区琉璃路8号华润广场B座1406室(查看路径地图查看地图)",
+                    "name": "姓名：代用名",
+                    "phone": "电话：155 1555 1555",
+                    "email": "邮箱：459842515@qq.com"
+                }
+            }
+        }
+    }
+}

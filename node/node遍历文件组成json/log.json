@@ -1,0 +1,36 @@
+{
+  "JIAOYU": {
+    "key": "前沿多媒体",
+    "img": "./static/img/home/QIANYANDUOMEI.png",
+    "type": "first",
+    "second": {
+      "HUOTESHANG": {
+        "main_img": "./static/img/JIAOYU/HUOTESHANG/1头图.jpg",
+        "text": [],
+        "time": "2019年",
+        "type": "",
+        "children": [
+          "./static/img/JIAOYU/HUOTESHANG/1头图.jpg",
+          "./static/img/JIAOYU/HUOTESHANG/2.jpg",
+          "./static/img/JIAOYU/HUOTESHANG/3.jpg",
+          "./static/img/JIAOYU/HUOTESHANG/4.jpg",
+          "./static/img/JIAOYU/HUOTESHANG/5.jpg",
+          "./static/img/JIAOYU/HUOTESHANG/6.png",
+          "./static/img/JIAOYU/HUOTESHANG/7.jpg",
+          "./static/img/JIAOYU/HUOTESHANG/8.jpg"
+        ]
+      },
+      "INFOSYS": {
+        "main_img": "./static/img/JIAOYU/INFOSYS/1头图.jpg",
+        "text": [],
+        "time": "2019年",
+        "type": "",
+        "children": [
+          "./static/img/JIAOYU/INFOSYS/1头图.jpg",
+          "./static/img/JIAOYU/INFOSYS/2.jpg",
+          "./static/img/JIAOYU/INFOSYS/3.jpg"
+        ]
+      }
+    }
+  }
+}

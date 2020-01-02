@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <style>
+    .box {
+      display: flex;
+    }
+
+    #app {
+      width: 50%;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <el-form ref="form" label-width="80px">
+      <el-form-item label="初始化">
+        <div class="box">
+          <el-input v-model='baseUrl' placeholder='请输入socket API 地址'></el-input>
+          <el-button @click="line">链接</el-button>
+        </div>
+      </el-form-item>
+      <el-form-item label="发送消息">
+        <div class="box">
+          <el-input v-model='request' placeholder='请输入 发送内容'></el-input>
+          <el-button @click="send">发送</el-button>
+        </div>
+      </el-form-item>
+      <el-form-item label="log">
+        <el-input v-model='response' autosize type='textarea' rows='4'></el-input>
+      </el-form-item>
+    </el-form>
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        baseUrl: 'ws://192.168.1.40:8001',
+        socket: '',
+        socketSattus: 0,
+        response: '',
+        request: '',
+      },
+      mounted() { },
+      methods: {
+        line: function () {
+          if (typeof (WebSocket) === "undefined") {
+            this.$message.error("你的浏览器不支持WebSocket")
+          } else if (!this.baseUrl) {
+            this.$message.error("没有输入socket API地址")
+          } else {
+            // 实例化socket
+            this.socket = new WebSocket(this.baseUrl)
+            // 监听socket连接
+            this.socket.onopen = this.open
+            // 监听socket错误信息
+            this.socket.onerror = this.error
+            // 监听socket消息
+            this.socket.onmessage = this.getMessage
+          }
+        },
+        open: function () {
+          this.$message.success("socket连接成功")
+          this.response += 'socket连接成功\n'
+          this.socketSattus = 1
+        },
+        error: function () {
+          this.$message.error("连接错误")
+          this.response += '链接关闭，5秒后重连\n'
+          this.socketSattus = 0
+          setTimeout(() => {
+            this.response += '重新发送重连请求\n'
+          }, 500);
+        },
+        getMessage: function (msg) {
+          this.response += `收到消息${JSON.stringify(msg)}\n`
+          this.$message.success("收到消息" + JSON.stringify(msg))
+        },
+        send: function () {
+          if (!this.socketSattus) {
+            this.$message.error("还未开启socket")
+            return
+          }
+          this.response += `发送消息：${this.request}\n`
+          this.socket.send(this.request)
+
+        },
+        close: function () {
+          this.$message.success("socket已经关闭")
+          this.response += `关闭socket\n`
+          this.socketSattus = 0
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>
