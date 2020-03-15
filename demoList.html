@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>公司项目地址列表</title>
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <style>
+    #app {
+      display: flex;
+    }
+
+    .box-card {
+      flex: 1;
+      margin: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <el-card class="box-card" v-for="(item,key,index) of linkList" :key="'card'+index">
+      <div slot="header" class="clearfix">
+        <span>{{ key }}</span>
+      </div>
+
+      <div v-for="(val,idx) of item" :key="idx" class="text item">
+        <el-popover placement="right" trigger="hover" v-if="key == '电脑端'">
+          <div>
+            <span>管理员账号：</span>
+            <div class="userName">用户名：{{ val['userName'] }}</div>
+            <div class="pwd">密码：{{ val['pwd'] }}</div>
+          </div>
+          <el-link slot="reference" @click="tolink(val['link'])">{{ val['name'] +' : '+ val['link'] }}</el-link>
+        </el-popover>
+        <el-link v-else @click="tolink(val['link'])">{{ val['name'] +' : '+ val['link'] }}</el-link>
+      </div>
+    </el-card>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        linkList: {
+          '电脑端': [
+            { name: "saasPC版", link: 'https://www2.smartwork.link/saas/', userName: 'smartwsg@163.com', pwd: '123456' },
+            { name: "saas合并测试版", link: 'https://www2.smartwork.link/saasDev/', userName: 'smartwsg@163.com', pwd: '123456' },
+            { name: "本地版", link: 'https://www2.smartwork.link/meetingNative/', userName: 'admin@admin.com', pwd: '123456' },
+            { name: "老版会议预约", link: 'https://www2.smartwork.link/manager/', userName: 'admin@admin.com ', pwd: 'admin' },
+            { name: "盈德气体", link: 'https://www2.smartwork.link/yingdePC/', userName: 'admin@admin.com', pwd: '123456' },
+            { name: "运维系统", link: 'https://www2.smartwork.link/mofe/', userName: 'admin@admin.com', pwd: 'admin' },
+            { name: "saas后台管理系统", link: 'https://www2.smartwork.link/saasCms/', userName: 'admin@admin.com', pwd: '123456' },
+            { name: "saasPC版", link: 'https://www2.smartwork.link/saas/', userName: 'smartwsg@163.com', pwd: '123456' },
+            { name: "线上版本", link: 'https://saas.smartwork.link/', userName: '1244928885@qq.com', pwd: '123456' },
+            { name: "本地演示版", link: 'https://local.stable.smartwork.link/', userName: 'admin@admin.com', pwd: '123456' },
+          ],
+          "手机端": [
+            { name: "saas手机端", link: 'https://www2.smartwork.link/mp_phone/' },
+            { name: "本地手机端", link: 'https://www2.smartwork.link/mp_phone_native/' },
+            { name: "本地演示手机端", link: 'https://local.stable.smartwork.link/phone' },
+          ],
+          "共语": [
+            { name: "初始版本共语页面", link: 'https://www2.smartwork.link/swpDisplay/' },
+            { name: "saas共语", link: 'https://www2.smartwork.link/swpDisplayGY/' },
+            { name: "高意共语", link: 'https://www2.smartwork.link/swpDisplayGaoYi_whiteTheme/' },
+          ],
+        }
+      },
+      components: {
+      },
+      methods: {
+        tolink(url) {
+          window.open(url, "_blank");
+        }
+      }
+    })
+  </script>
+</body>
+
+</html>

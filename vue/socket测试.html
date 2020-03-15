@@ -26,6 +26,7 @@
         <div class="box">
           <el-input v-model='baseUrl' placeholder='请输入socket API 地址'></el-input>
           <el-button @click="line">链接</el-button>
+          <el-button @click="searchStatus">状态</el-button>
         </div>
       </el-form-item>
       <el-form-item label="发送消息">
@@ -69,6 +70,9 @@
             // 监听socket消息
             this.socket.onmessage = this.getMessage
           }
+        },
+        searchStatus() {
+          console.log(this.socket)
         },
         open: function () {
           this.$message.success("socket连接成功")
