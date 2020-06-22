@@ -2,54 +2,64 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
 </head>
 
 <body>
-    <div id="app">
-        <input type="text" v-model='$store.getters.count.text'>
-        <button @click='btnClick'>打印</button>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="https://unpkg.com/vuex@2.0.0"></script>
-    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.js"></script>
-    <script>
-        const store = new Vuex.Store({
-            // vuex 严格模式 
-            // strict: true,
-            state: {
-                count: { text: '' }
-            },
-            getters: {
-                count: state => {
-                    return state.count
-                }
-            },
-            mutations: {
-                increment(state) {
-                    state.count++
-                }
-            }
-        })
-        var app = new Vue({
-            el: '#app',
-            data: {
-                num: ''
-            },
-            mounted() {
-                console.log(this.$store.getters.count)
-            },
-            store,
-            methods: {
-                btnClick() {
-                    console.log(this.$store.getters.count.text)
-                }
-            }
-        })
-    </script>
+  <div id="app">
+    <input type="text" v-model='$store.getters.count.text'>
+    <button @click='btnClick'>打印</button>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/vuex@2.0.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.js"></script>
+  <script>
+    const store = new Vuex.Store({
+      // vuex 严格模式 
+      // strict: true,
+      state: {
+        count: { text: '' },
+        test: '123'
+      },
+      getters: {
+        count: state => {
+          return state.count
+        }
+      },
+      mutations: {
+        increment(state) {
+          state.count++
+        },
+        setTest(state, data) {
+          state.test = data
+        }
+      }
+    })
+    var app = new Vue({
+      el: '#app',
+      data: {
+        num: ''
+      },
+      mounted() {
+        console.log(this.$store.getters.count)
+      },
+      store,
+      watch: {
+        '$store.getters.count': function (val) {
+          console.log(val)
+        }
+      },
+      methods: {
+        btnClick() {
+          console.log(this.$store.getters.count.text)
+          this.$store.commit('setTest', this.num)
+        }
+      }
+    })
+  </script>
 </body>
 
 </html>

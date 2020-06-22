@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .demo {
+      display: inline-block;
+      background: red;
+      color: #fff;
+      transition: .5s all;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <!-- <transition appear v-on:before-appear="customBeforeAppearHook" v-on:after-appear="customAppearHook"
+      :duration="1000">
+      <div class="demo">123123</div> -->
+
+    <!-- </transition> -->
+    <div @click='changeText(false)'>赋值自己</div>
+    <div @click='changeText(Date.now())'>复制时间戳</div>
+    <div @click='changeText(Date.now())'>{{ time }}</div>
+    <demo :test='test'>
+    </demo>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        value: '',
+        map: new Map(),
+        test: {
+          a: '123'
+        }
+      },
+      components: {
+        'demo': {
+          props: ['test'],
+          template: '<h3>{{ time }}</h3>',
+          computed: {
+            time() {
+              return this.test['a']
+            }
+          }
+        }
+      },
+      watch: {
+        test: {
+          handler(val) {
+            console.log('watch', val)
+          },
+          deep: true
+        }
+      },
+      computed: {
+        time() {
+          return this.test['a']
+        }
+      },
+      methods: {
+        changeText(val) {
+          console.log('123', val)
+          // this.test = val || this.test
+          this.$set(this.test, 'a', 111)
+          // this.test.a = val
+        },
+        // customBeforeAppearHook(el, done) {
+        //   console.log(el, done)
+        //   el.style.height = '100px'
+        // },
+        // customAppearHook(el, done) {
+        //   console.log(el, done)
+        //   el.style.height = '500px'
+        //   done()
+        // },
+      }
+    })
+  </script>
+</body>
+
+</html>
