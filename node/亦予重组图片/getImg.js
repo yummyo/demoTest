@@ -29,7 +29,9 @@ imgDirList.map(v => {
   let imgDir = fs.readdirSync(imgListPath + '/' + v)
   let [date, zhName, cnName, site, sort] = v.split('-')
   fileList[v] = {
-    list: imgDir,
+    list: imgDir.sort((a, b) => {
+      return a.split('.')[0] * 1 - b.split('.')[0] * 1
+    }),
     date: date.split("年")[0],
     zhName, cnName, site, sort,
     name: v,
