@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body id="all_date">
+  <form action="http://dmp-app.faw-mazda.com/api/lms_clue_api/index" method="get">
+    <input type="text" name='identity' value="379CB826-C594-093F-0753-4724AAC62977">
+    <input type="text" name='mobile' value="15188390713">
+    <input type="text" name='name' value="网易测试_勿电">
+    <input type="text" name='ctype' value="99">
+    <input type="text" name='product' value="1415">
+    <input type="text" name='sex' value="1">
+    <input type="text" name='dealer' value="10302">
+    <input type="text" name='channel' value=" 10061">
+    <input type="text" name='customer' value=" 81">
+    <input type="text" name='way' value=" 29">
+    <input type="submit" value="test">
+  </form>
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $.ajax({
+      url: 'http://dealers.auto.163.com/user/order/getDFRCDealerList.json?key_code=9D2004AB-5AE3-469E-BAEA-BCF7B25D563D&brand_id=1&encode=utf-8',
+      data: {
+        KEY_CODE: 'A2020-2311-7880-3428-183264'
+      },
+      success: function (res) {
+        console.log('succes', res)
+      },
+      error: function (res) {
+        console.log('error', res)
+      }
+    })
+  </script>
+</body>
+
+</html>

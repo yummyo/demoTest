@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+
+<body>
+  <script>
+    function GetRequest() {
+      var url = location.search; //获取url中"?"符后的字串
+      var theRequest = new Object();
+      if (url.indexOf("?") != -1) {
+        var str = url.substr(1);
+        strs = str.split("&");
+        for (var i = 0; i < strs.length; i++) {
+          theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+        }
+      }
+      return theRequest;
+    }
+    // 获取浏览器参数 https://secmee.com/redirect.html?redirectUrl=index&forgetpwd=1234
+
+    // https://secmee.com/#/index?redirectUrl=index&forgetpwd=1234
+    // 拼接跳转url
+    const urlQuery = GetRequest();
+    let _url = `https://secmee.com/#/`
+    if (urlQuery['redirectUrl']) {
+      let queryUrl = ''
+      for (let params in urlQuery) {
+        if (params == 'redirectUrl') {
+          queryUrl = urlQuery[params] + queryUrl
+        } else if (params) {
+          let _s = /\?/.test(queryUrl) ? '&' : '?'
+          queryUrl += _s + `${params}=${urlQuery[params]}`
+        }
+      }
+      _url += queryUrl
+    } else {
+      _url += 'index'
+    }
+    window.location.href = _url
+  </script>
+</body>
+
+</html>
